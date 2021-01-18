@@ -1,0 +1,6 @@
+body{
+    background-image: url(assets/bg1.jpeg);
+    background-repeat: no-repeat;
+    background-color: #00ce2d;
+    background-blend-mode: darken ;
+}

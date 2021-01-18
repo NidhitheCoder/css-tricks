@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body > #bg {
+    height: 100%;
+    width:100%;
+    background-color: rgb(2,211,248);
+    clip-path: polygon(68% 16%, 100% 19%, 100% 57%, 19% 97%, 0 84%, 0% 50%);
+    position: absolute;
+    z-index: -1;
+}
