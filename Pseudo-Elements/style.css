@@ -9,7 +9,24 @@
     width: 100%;
 }
 
-h1::first-line{
+
+.container{
+    padding:4rem;
+}
+
+p::first-line{
     color:red;
     font-variant: small-caps;
+}
+
+h2::first-letter{
+    color: lawngreen;
+}
+
+h2::before{
+    content: "❤️️ "
+}
+
+p::after{
+    content: " 🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸 "
 }
