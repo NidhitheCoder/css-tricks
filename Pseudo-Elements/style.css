@@ -30,3 +30,8 @@ h2::before{
 p::after{
     content: " 🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸 "
 }
+
+::selection{
+    color: red;
+    background: yellow;
+}
