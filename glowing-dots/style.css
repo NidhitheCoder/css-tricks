@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background: #001300;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+span {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  display: block;
+}
+
+span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #00ff0a;
+  transform: scale(0.1);
+  box-shadow: 0 0 10px #00ff0a,
+  0 0 20px #00ff0a,
+  0 0 40px #00ff0a,
+  0 0 60px #00ff0a,
+  0 0 80px #00ff0a,
+  0 0 100px #00ff0a;
+  pointer-events: none;
+  border-radius: 50%;
+  transition: 2s;
+}
+
+span:hover::before{
+    transform: scale(1);
+    transition: 2s;
+}
