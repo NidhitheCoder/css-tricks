@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element{
+    background: crimson;
+    width: 10rem;
+    height: 10rem;
+    /* border-radius: 30%; */
+    /* border-radius: 3rem 4rem 6rem 10rem; */
+    /* border-radius: 5rem 15rem; */
+    /* border-top-left-radius: 5rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 15rem; */
+    border-radius: 5rem/15rem; 
+     /*  ^ like this you can add upto 8 values  */
+}
