@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Old way 
+header h1,header a{
+  color: limegreen;
+} */
+
+/* New way  */
+
+header {
+  padding: 2rem;
+}
+
+header :is(h1, a) {
+  color: limegreen;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+.card {
+  height: 300px;
+  width: 100%;
+  /* background-color: rgba(128,0,128,0.5); */
+  border: 5px solid purple;
+  color: darkslategrey;
+  margin: 2rem;
+  padding: 3rem;
+}
+
+.card :is(h2, a) {
+  color: limegreen;
+}
+
+:is(header, .card) p:hover {
+  color: orangered;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card {
+    margin: 2rem;
+    width: unset;
+  }
+}
