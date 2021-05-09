@@ -1,0 +1,33 @@
+body {
+  background: #e3516e;
+  position: relative;
+}
+.circle {
+  position: absolute;
+  top: 42px;
+  left: 92px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.i {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+.i1 {
+  background: #51b5a9;
+  top: 0%;
+  left: 0%;
+}
+.i2 {
+  background: #f7f3d7;
+  bottom: 0%;
+  left: 0%;
+}
+.i3 {
+  background: #fade8b;
+  right: 0%;
+  top: 0%;
+}
