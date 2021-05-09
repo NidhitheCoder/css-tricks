@@ -1,0 +1,45 @@
+  
+body {
+  background:#6592CF;
+  position:relative;
+  width:90vw;
+  height:90vh;
+}
+
+.container {
+  background:#243D83;
+  height:150px;
+  width:300px;
+  position:absolute;
+  top:22%;
+  left:10%;
+  display:grid;
+  place-items:center;
+}
+
+.circle{
+  width:255px;
+  height:255px;
+  left:8%;
+  position:absolute;
+  background:#6592CF;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+}
+
+.dark-circle{
+  background:#243D83;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+}
+
+.dot{
+  background:#EEB850;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+}

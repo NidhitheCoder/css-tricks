@@ -1,0 +1,23 @@
+body {
+  background: #0b2429;
+}
+.i {
+  height: 150px;
+  width: 150px;
+  border-top-left-radius: 66%;
+  border-bottom-right-radius: 66%;
+  position: absolute;
+  top: 75px;
+}
+.i1 {
+  background: #1a4341;
+  left: 75px;
+}
+.i2 {
+  background: #998235;
+  left: 125px;
+}
+.i3 {
+  background: #f3ac3c;
+  left: 175px;
+}

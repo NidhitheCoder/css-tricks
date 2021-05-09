@@ -1,0 +1,27 @@
+body {
+  background: #62306d;
+}
+.i {
+  background: #f7ec7d;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+.i:nth-child(odd) {
+  top: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.i-1 {
+  left: 50px;
+}
+.i-3 {
+  right: 50px;
+}
+.i-2 {
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}

@@ -1,0 +1,27 @@
+body {
+  background: #0b2429;
+}
+.i {
+  height: 120px;
+  width: 120px;
+  background: #f3ac3c;
+  position: absolute;
+  border-radius: 50%;
+}
+.i1 {
+  left: 80px;
+  top: 50%;
+  z-index: 2;
+  border-top-right-radius: 0;
+}
+.i2 {
+  left: 140px;
+  top: 30%;
+  background: #998235;
+  z-index: 1;
+  border-top-right-radius: 0;
+}
+.i3 {
+  left: 200px;
+  top: 10%;
+}
