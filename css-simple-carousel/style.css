@@ -1,0 +1,64 @@
+body {
+  height:100vh;
+  width:100vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+  background: cornflowerblue;
+}
+
+.container{
+  width: 200px;
+  height: 200px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.item {
+  width:200px;
+  background: royalblue;
+  color:#fff;
+  display: inline-flex;
+  flex: 0 0 200px;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  scroll-snap-align: start;
+}
+
+.item:nth-child(odd){
+  background: tomato;
+}
+
+.links{
+  height:150px;
+}
+
+.links > a {
+  height:100px;
+  width: 100px;
+  color:blue;
+  text-decoration: none;
+  padding: 10px;
+  background: green;
+  border-radius: 50%;
+}
