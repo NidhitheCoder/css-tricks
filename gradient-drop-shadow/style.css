@@ -9,6 +9,7 @@ body{
   display: grid;
   place-items: center;
   min-height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .box{
@@ -18,6 +19,7 @@ body{
   margin: 40px;
   display: grid;
   place-items: center;
+  text-align: center;
 }
 
 .box::before {
@@ -47,5 +49,24 @@ body{
   position: relative;
   z-index: 1;
   font-size: 28px;
+  color: royalblue;
+}
+
+.box p {
+  color: royalblue;
+  font-size: 50%;
+  z-index: 0;
+  padding: 20px;
+  transition: 0.5s all;
+}
+
+.box:hover p{
   color: #fff;
+  font-size: 16px;
+  z-index: 1;
+} 
+
+.box:hover h1 {
+  color: #fff;
+
 }
