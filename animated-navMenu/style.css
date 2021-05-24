@@ -15,8 +15,12 @@
   display: grid;
   place-items: center;
   overflow: auto;
+  transform: scale(0);
+  transition: 0.5s;
 }
-
+#menu-overlay.active{
+  transform: scale(1);
+}
 #menu-overlay ul{
   position: relative;
 }
@@ -67,4 +71,9 @@
   background: #ff0;
   z-index: 1;
   cursor: pointer;
+  background-image: url('assets/open.png');
+}
+
+#toggle-icon.active{
+  background-image: url('assets/close.png');
 }
