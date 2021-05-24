@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Animated navigation menu</title>
+</head>
+<body>
+  <div id="toggle-icon" onclick="menuToggle();"></div>
+  <div id="menu-overlay">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Our Team</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+    const menuToggle = () => {
+      let nav = document.getElementById('menu-overlay');
+      nav.classList.toggle('active');
+      let toggler = document.getElementById('toggle-icon');
+      toggler.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
