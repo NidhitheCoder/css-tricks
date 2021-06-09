@@ -1,5 +1,5 @@
 *{
-  margin:35px;
+  margin:15px;
   padding:0;
   box-sizing: border-box;
 }
@@ -9,8 +9,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .circle{
@@ -19,15 +19,26 @@ body{
   width: 60vh;
   height: 60vh;
   border-radius: 50%;
+  animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .circle::after{
   content: '';
   position: absolute;
-  top:35px;
-  left:35px;
-  bottom:35px;
-  right:35px;
+  top:10px;
+  left:10px;
+  bottom:10px;
+  right:10px;
   background-color: #010101;
   border-radius: 50%;
 }
