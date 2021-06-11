@@ -1,49 +1,49 @@
-*{
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-#content{
+#content {
   padding: 10px;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(150px, auto);
   grid-gap: 10px;
   /* align-items: end;
   justify-items: start; */
 }
 
-#content div{
+#content div {
   background: #3bb423;
   padding: 30px;
 }
 
-#content div:nth-child(even){
+#content div:nth-child(even) {
   background: #777;
 }
 
-.one{
+.one {
   justify-self: end;
   align-self: end;
 }
 
-.two{
+.two {
   justify-self: center;
   align-self: center;
 }
 
-.three{
+.three {
   justify-self: start;
   align-self: start;
 }
 
-.four{
+.four {
   justify-self: center;
   align-self: end;
 }
 
-.five{
+.five {
   justify-self: right;
   align-self: center;
 }
