@@ -1,0 +1,22 @@
+body{
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #333333;
+}
+
+.animated {
+  font-size: 40px;
+  font-weight: 900;
+  background: linear-gradient(to right, #ccc 50%,#ff5858 50%, #cc2e5d);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-out;
+}
+
+.animated:hover {
+  background-position: -100%;
+}
