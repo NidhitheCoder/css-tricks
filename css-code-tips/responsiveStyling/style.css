@@ -1,0 +1,90 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px 0;
+}
+
+/* prefered
+.article {
+  width: 50%;
+  background: goldenrod;
+  height: 100px;
+}
+
+Smaller screen
+@media only screen and (max-width: 600px){
+  .article{
+    width: 200px;
+  }
+}
+
+Larger screen
+@media only screen and (min-width: 1200px){
+  .article{
+    width: 800px;
+  }
+} */
+
+.article {
+  width: clamp(200px, 50%, 800px);
+  background: goldenrod;
+  height: 100px;
+}
+
+.video {
+  aspect-ratio:auto 16/9;
+  background: hotpink;
+}
+
+/* css variables */
+:root {
+  --text-color: blue;
+}
+
+.article p, .article h1, .article h2, .article h3, .article h4 {
+  color: var(--text-color);
+}
+
+span {
+  color: var(--text-color);
+}
+
+.overrideColor{
+  --text-color: green;
+  color: var(--text-color);
+  font-size: 24px;
+}
+
+/* calc functions */
+.calc-width-div{
+  width: calc(100vw - 80px);
+  font-size: calc(1rem * 2);
+  padding: calc(5% + 2px);
+  background: tomato;
+}
+
+/* counter state */
+.counter-container {
+  display: grid;
+  place-items: center;
+}
+
+:root {
+  counter-reset: headings;
+}
+
+.item{
+  counter-increment: headings;
+}
+.item::before {
+  content: counter(headings);
+}
