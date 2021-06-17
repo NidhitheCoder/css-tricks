@@ -1,0 +1,17 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+section {
+  width:100%;
+  min-height: 1000px;
+}
+
+.wave{
+  position: relative;
+  background: linear-gradient(90deg, #f0027f, #75489f);
+  clip-path: polygon(0 0, 100% 1%, 100% 71%, 80% 84%, 58% 67%, 50% 85%, 23% 73%, 0 95%);
+}
