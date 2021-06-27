@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #0f0f0a;
+}
+
+.box {
+  width: calc(55%*9/16);
+  height: calc(55%*9/16);
+  background-color: red;
+  display: grid;
+  place-items: center;
+}

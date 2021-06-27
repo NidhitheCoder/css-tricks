@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 5%;
+  grid-gap: 5%;
+}
+
+.container1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  background: var(--yell);
+  padding: 5%;
+}
+
+.card{
+  background: darkviolet;
+  padding: 3%;
+  color: white;
+}
+
+.container2 {
+  display: flex;
+  flex: 1;
+  grid-gap: 5%;
+  background-color: brown;
+  padding: 5%;
+}
+
+.item {
+  background: dimgrey;
+  width: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  color: white;
+}
