@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.container {
+  width: 50%;
+}
+
+.flex-parent {
+  display: flex;
+}
+
+.flex-item {
+  padding: 0.5rem;
+  background: #efefef;
+  border: 3px solid #333;
+  width: max-content; /* max-content never wrap content to next line */
+}
+
+h1 {
+  padding: 2rem 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid red;
+}
+
+.flexshrink {
+  padding: .5rem;
+  border: 3px solid green;
+}
+
+.flexshrink.no-shrink{
+  flex-shrink: 0;
+}
