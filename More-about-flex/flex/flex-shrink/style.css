@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex-container {
+  width: 100%;
+  display: flex;
+  background: #fff;
+}
+
+.box {
+  height: 200px;
+  width: 320px;
+}
+
+.one{
+  background: red;
+  flex-shrink: 1;
+}
+
+.two {
+  background: green;
+  flex-shrink: 3;
+}
+
+.three {
+  background: blue;
+  flex-shrink: 6;
+}
