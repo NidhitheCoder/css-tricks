@@ -13,7 +13,8 @@
 }
 
 .container-1 div,
-.container-2 div {
+.container-2 div,
+.container-3-box {
   border: 1px solid #ccc;
   padding: 2rem;
 }
@@ -43,12 +44,21 @@
   flex-basis: 25%;
 }
 
+.container-3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container-3-box {
+  flex-basis: 15%;
+}
+
 @media(max-width:768px) {
   .container-1 {
-    display: flex;
+    flex-direction: column;
   }
   .container-2 {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
 }
