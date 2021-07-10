@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+}
+
+.card {
+  padding: 3rem;
+  width: 80%;
+  min-width: 300px;
+  background: lightyellow;
+  margin: 5em auto;
+  box-shadow: -2px 1px 35px 14px rgba(235,222,22,0.79);
+  -webkit-box-shadow: -2px 1px 35px 14px rgba(235,222,22,0.79);
+  -moz-box-shadow: -2px 1px 35px 14px rgba(235,222,22,0.79);
+  display: flow-root;
+}
+
+.card img {
+  float: left;
+  margin: 1em;
+}
