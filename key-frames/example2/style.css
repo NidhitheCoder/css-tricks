@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.grass, .sky, .road{
+  position: relative;
+}
+
+.sky {
+  height: 70%;
+  background: skyblue;
+}
+
+.grass {
+  height: 100%;
+  background: seagreen;
+  z-index: 1;
+  clip-path:polygon(0 100%, 0 69%, 10% 63%, 15% 59%, 22% 54%, 18% 53%, 28% 52%, 31% 55%, 32% 57%, 34% 61%, 35% 64%, 37% 68%, 38% 69%, 43% 72%, 45% 71%, 48% 70%, 53% 67%, 53% 66%, 54% 64%, 57% 63%, 63% 66%, 66% 68%, 69% 73%, 75% 70%, 79% 68%, 80% 67%, 81% 65%, 87% 63%, 89% 62%, 92% 60%, 95% 60%, 97% 62%, 99% 63%, 100% 75%, 99% 100%);
+}
+
+.road {
+  height: 30%;
+  background: dimgrey;
+  border-top: 10px solid gray;
+  border-bottom: 10px solid gray;
+  width: 100%;
+}
+
+.lines {
+  border: 5px dashed white;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+.rider {
+  height: 130px;
+  width: 130px;
+  z-index: 10;
+}
+
+/* ELEMENTS TO ANIMATE */
+.rider {
+  top: -40px;
+  position: absolute;
+  left: 0px;
+  animation-name: drive;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  z-index: 10;
+}
+
+/* KEYFRAMES */
+@keyframes drive {
+  from {
+    /* transform: translateX(0); */
+    left: -1%;
+  }
+  to {
+    /* transform: translateX(700px); */
+    left: 110%;
+  }
+}
+
+.shop1 {
+  position: absolute;
+  top: 60%;
+  right: 20%;
+  height: 200px;
+  width: 150px;
+  z-index: 2;
+}
+
+.shoping-girls {
+  position: absolute;
+  right: 50%;
+  height: 100px;
+  width: 150px;
+  bottom: 1%;
+  z-index: 2;
+}
+
+.bulding {
+  z-index: 1;
+  height: 200px;
+  width: 100%;
+  }
