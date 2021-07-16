@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.grass, .sky, .road{
+  position: relative;
+}
+
+.sky {
+  height: 40%;
+  background: skyblue;
+}
+
+.grass {
+  height: 30%;
+  background: seagreen;
+}
+
+.road {
+  height: 30%;
+  background: dimgrey;
+  border-top: 10px solid gray;
+  border-bottom: 10px solid gray;
+  width: 100%;
+}
+
+.lines {
+  border: 5px dashed white;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+.rider {
+  height: 80px;
+  width: 80px;
+  z-index: inherit;
+}
+
+/* ELEMENTS TO ANIMATE */
+.rider {
+  top: -40px;
+  position: absolute;
+  left: 0px;
+  animation-name: drive;
+  animation-duration: 3s;
+}
+
+/* KEYFRAMES */
+@keyframes drive {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(700px);
+  }
+}
