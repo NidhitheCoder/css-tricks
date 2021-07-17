@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: burlywood;
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.red {
+  height: 100px;
+  width: 100px;
+  background-color: darkred;
+  /* transition-property: all;
+  transition-delay: 1s;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in; */
+  transition: all 0.5s linear;
+}
+
+.red:hover {
+  width: 250px;
+  height: 250px;
+  background-color: limegreen;
+  border-radius: 50%;
+  transform: rotate(180deg);
+}
