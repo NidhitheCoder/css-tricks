@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,10 +14,44 @@ body{
   background-color: palegoldenrod;
 }
 
-.required::before {
-  content: '';
-  display: block;
+input,
+label {
+  min-width: 300px;
+  padding: 5px;
+  margin: 10px;
+  font-size: 1em;
+  white-space: nowrap;
+  text-align: left;
+}
+
+button {
+  background-color: forestgreen;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 16px;
+}
+
+.required::after {
+  content: "* required";
+  font-size: 12px;
   height: 10px;
   width: 10px;
-  background-color: orangered;
+  color: orangered;
 }
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  margin: 4rem 1rem;
+  background-color: tomato;
+}
+
+/* After abd before accept the value that first we declared. */
