@@ -28,7 +28,6 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus optio sunt suscipit ipsa quis sed quae sequi incidunt sit ipsam ea libero, quisquam ab esse beatae, magni distinctio eveniet dolores.</p>
         <a href="">Read More</a>
       </div>
-      <a href="">Read More</a>
     </div>
     <div class="card">
       <div class="content">
@@ -39,5 +38,15 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="vanilla-tilt.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 1,
+    });
+	
+  </script>
 </body>
 </html>
