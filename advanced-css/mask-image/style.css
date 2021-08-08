@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh ;
+  overflow-x: hidden;
+  background: orchid;
+}
+
+img {
+  width: 100%;
+  /* mask-image: url('PngItem_106495.png'); */
+  mask-image: linear-gradient(to bottom, 25% transparent, orchid 75%);
+  -webkit-mask-image: linear-gradient(to bottom, 25% transparent, blue 75%);;
+  /* mask-repeat: no-repeat;
+  mask-size: contain;
+  background-repeat: no-repeat; */
+}

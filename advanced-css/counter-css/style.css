@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  counter-reset: section;
+  counter-reset: heading;
+}
+
+h3::before {
+  counter-increment: section;
+  content: "Section" counter(section) ": ";
+}
+
+h1::before {
+content: counter(heading) " )";
+counter-increment: heading;
+}
+
+h1 {
+  counter-reset: subheading;
+}
+
+h2::before {
+  content: counter(heading) '.' counter(subheading) ')';
+  counter-increment: subheading;
+}
