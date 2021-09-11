@@ -15,6 +15,13 @@ body {
   margin: 2rem;
 }
 
+.wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
+  /* auto-fill, auto-fit */
+  justify-content: center;
+}
+
 .container {
   overflow: hidden;
   box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
@@ -27,7 +34,7 @@ body {
 
 .banner-img {
   position: absolute;
-  background-image: url('hello.png');
+  background-image: url('./flower.jpg');
   height: 10rem;
   width: 100%;
   background-position: center ;
@@ -60,3 +67,10 @@ body {
   padding: 1rem;
   background-color: var(--clr-primary);
 }
+
+
+/* @media screen and (min-width:600px) {
+  .wrapper-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
