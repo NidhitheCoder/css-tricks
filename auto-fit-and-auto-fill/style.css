@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #555;
+  background: #333;
+  margin: 3rem;
+}
+
+.portfolio {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  /* autofit fit automatically child components inside parent */
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  /* autofill fill empty child components when it needed(when width is high) */
+  grid-gap: 1rem;
+}
+
+.portfolio-items {
+  background: white;
+  padding: 1rem;
+}
+
+.portfolio-title {
+  text-align: center;
+  color: #00c896;
+  grid-column: 1/ -1;
+}
+
+img {
+  max-width: 100%;
+}
