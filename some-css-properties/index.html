@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Some unusual css properties</title>
+  <style>
+    a:visited {
+      color: red;
+    }
+
+    .write-mode {
+      writing-mode: tb-rl;
+    }
+
+    ::placeholder {
+      color: red;
+      background-color: rgb(243, 147, 130);
+    }
+
+    input {
+      caret-color: springgreen;
+    }
+  </style>
+</head>
+<body>
+  <!-- Visited Psudo code -->
+  <a href="http://localhost:3000/video">One</a>
+  <br>
+  <br>
+  <a href="http://localhost:3000/search">Two</a>
+
+  <!-- Writing mode -->
+  <div class="write-mode">
+    Welcome to codeboard
+  </div>
+
+  <!-- placeholder color -->
+  <input type="text" placeholder="Enter Name" >
+</body>
+</html>
