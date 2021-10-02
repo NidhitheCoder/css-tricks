@@ -22,6 +22,18 @@
     input {
       caret-color: springgreen;
     }
+
+     @supports (position: sticky) {
+       body {
+         background-color: red;
+       }
+     }
+
+     @supports not (transition:all) {
+       body {
+         background-color: red;
+       }
+     }
   </style>
 </head>
 <body>
