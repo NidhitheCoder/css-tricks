@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collapsing margins</title>
+    <style>
+
+      .container {
+        padding: 2rem;
+      }
+
+      .hero {
+        background-color: coral;
+        text-align: center;
+        padding: 1em; /* padding 1em helps to conistent space in div */
+      }
+
+      .hero-content {
+        background-color: white;
+        padding-top: 1px; /* padding top 1 helps to fix the issue but it is not the actual solution */
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      p {
+        margin-top: 10px; /* No change in UI */
+      }
+
+      h1 {
+        margin-top: 20px; /* The whole parent also moving */
+      }
+
+      .flex {
+        display: flex; /* flex and grid make some layout space for its contents*/
+      }
+
+      .grid {
+        display: grid; /* flex and grid make some layout space for its contents*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero default">
+        <div class="hero-content">
+          <h1>This is the headline</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nulla
+            fugit voluptatibus ad culpa laborum officiis necessitatibus soluta
+            minima distinctio.
+          </p>
+        </div>
+      </div>
+      </div>
+
+      <div class="container">
+      <div class="hero flex">
+        <div class="hero-content">
+          <h1>This is flex container</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, culpa
+            esse. Ipsam fugit tenetur suscipit a dicta minus et nobis,
+            distinctio totam quam enim ullam non porro vero repudiandae
+            consequuntur?
+          </p>
+        </div>
+      </div>
+      </div>
+
+      <div class="container">
+      <div class="hero grid">
+        <div class="hero-content">
+          <h1>This is grid container</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+            facere ipsam nobis eligendi voluptatibus culpa, excepturi dolorum
+            quae sed possimus reprehenderit. Delectus, sapiente voluptatem
+            provident inventore facere iste consectetur natus.
+          </p>
+        </div>
+      </div>
+      </div>
+
+    </div>
+  </body>
+</html>
