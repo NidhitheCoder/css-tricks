@@ -19,9 +19,11 @@
 
       .hero-content {
         background-color: white;
-        padding-top: 1px; /* padding top 1 helps to fix the issue but it is not the actual solution */
+        /* padding-top: 1px; padding top 1 helps to fix the issue but it is not the actual solution */
         width: 70%;
         margin: 0 auto;
+        display: flow-root; /* helps to collapsing margin issue fix */
+        padding: 2em;
       }
 
       p {
@@ -29,7 +31,13 @@
       }
 
       h1 {
-        margin-top: 20px; /* The whole parent also moving */
+        /* margin-top: 20px; The whole parent also moving */
+        margin: 0;
+      }
+
+      .flow > * + * {
+        margin-top: 1em;
+        background: red;
       }
 
       .flex {
@@ -44,8 +52,10 @@
   <body>
     <div class="container">
       <div class="hero default">
-        <div class="hero-content">
+        <div class="hero-content flow">
           <h1>This is the headline</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, veniam.</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, cumque?</p>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nulla
             fugit voluptatibus ad culpa laborum officiis necessitatibus soluta
