@@ -35,7 +35,7 @@
         margin: 0;
       }
 
-      .flow > * + * {
+      .flow > * + * { /* select all child element except first element => .flow > *:not(:first-child) {}*/
         margin-top: 1em;
         background: red;
       }
