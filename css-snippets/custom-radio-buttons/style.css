@@ -15,11 +15,12 @@ body {
 
 input[type="radio"] {
   position: relative;
-  height: 40px;
-  width: 120px;
+  height: 45px;
+  width: 135px;
   margin: 10px;
   outline: none;
   background: #222;
+  border: 3px solid red;
   -webkit-appearance: none;
   cursor: pointer;
   border-radius: 20px;
@@ -33,4 +34,42 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
   background: #20b7ff;
+}
+
+input[type="radio"]::before {
+  content:'';
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(to top, #000, #555);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #232323;
+  transform: scale(0.98, 0.96);
+}
+
+input[type="radio"]:checked::before {
+  left: 50px
+}
+
+
+input[type="radio"]::after {
+  content: '';
+  position: absolute;
+  left: 65px;
+  top: calc(50% - 2px);
+  width: 4px;
+  height: 4px;
+  background: #555;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+input[type="radio"]:checked::after {
+  background: #20b7ff;
+  left: calc(65px + 40px);
+  box-shadow: 0 0 5px #63cdff,
+              0 0 15px #63cdff,
+              0 0 30px #63cdff;
 }
