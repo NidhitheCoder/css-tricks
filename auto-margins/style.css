@@ -47,9 +47,10 @@
    display: flex;
    /* background: lightblue; */
    flex-direction: column;
-   justify-content: center;
+   /* justify-content: center; */
    gap: 1em;
    /* margin-left: 1em; */
+   height: 100%;
  }
 
  .nav-list a {
@@ -70,6 +71,8 @@
  .nav-list li:nth-of-type(6) {
   /* background-color: lightgreen; */
   /* margin-left: auto; */
+  margin-top: auto;
+  /* margin-bottom: auto; */
  }
 
  /* .nav-list li:nth-of-type(7) {
