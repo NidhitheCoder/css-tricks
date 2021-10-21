@@ -5,11 +5,32 @@
   font-family: sans-serif;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  width: 100%;
-  background-color: lightslategrey;
+.first-example {
+  display: block;
+}
+
+.example {
+  padding: 2rem;
+  width: 50%;
+  /* margin: 1em auto; */
+  background: teal;
+}
+
+/* + combinator helps to get simbling components */
+/*
+.example + .example {
+  background-color: red;
+}
+
+div + .example {
+  background-color: red;
+} 
+
+.three + .example {
+    background: red;
+} */
+
+* + * {
+  margin: 1em 0 0;
+  /* avoid styling first component in group- becouse it has no sibling before it */
 }
