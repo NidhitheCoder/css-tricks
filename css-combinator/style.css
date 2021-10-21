@@ -32,5 +32,13 @@ div + .example {
 
 * + * {
   margin: 1em 0 0;
-  /* avoid styling first component in group- becouse it has no sibling before it */
+  /* avoid styling first component in group- becouse it has no
+   sibling before it. and it adjust margin top automatically based on font size */
+}
+
+.date + .lorem-items {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  grid-column: 1 / 3;
+  color: orange;
 }
