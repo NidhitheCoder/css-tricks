@@ -15,5 +15,6 @@ body {
   background: #234;
   color: white;
   /* height: 50%; */
-  height: auto;
+  /* height: auto; */
+  min-height: 500px;
 }
