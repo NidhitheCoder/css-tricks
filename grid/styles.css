@@ -10,3 +10,32 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.overlaping-grid {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+
+  /* grid-template-areas: 
+  "image image image"
+  "title text text"
+  "image image image"; shows invalid property, becouse of you can't have two different
+      areas with same name(in this case image image*/ 
+
+  grid-auto-rows: 200px;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "image-section-one image-section-one image-section-one"
+    "title text text"
+    "image-section-two image-section-two image-section-two";
+}
+
+.overlaping-grid h1 {
+  /* grid-row: span 3; */
+  grid-row: 2/4;
+  font-size: 4rem;
+  color: white;
+  padding: 2rem;
+  text-shadow: 0 0 1rem rgb(0 0 0/ 0.2);
+  z-index: 1;
+  background: red;
+}
