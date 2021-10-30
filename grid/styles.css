@@ -31,7 +31,12 @@ body {
 
 .overlaping-grid h1 {
   /* grid-row: span 3; */
-  grid-row: 2/4;
+  /* grid-row: 2 / 4; you can do this with grid columns also */
+  /* grid-row: image-section-one / title; */
+  /* grid-row: image-section-one / title-end; */
+  /* grid-row: image-section-one / title-start; */
+  /* grid-row: image-section-one / image-section-two-start; */
+  grid-row: image-section-one / image-section-two-end;
   font-size: 4rem;
   color: white;
   padding: 2rem;
