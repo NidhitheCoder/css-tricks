@@ -21,12 +21,27 @@ body {
   "image image image"; shows invalid property, becouse of you can't have two different
       areas with same name(in this case image image*/ 
 
-  grid-auto-rows: 200px;
-  grid-auto-columns: 1fr;
-  grid-template-areas:
+  /* grid-auto-rows: 200px;
+  grid-auto-columns: 1fr; */
+  align-items: center;
+  /* grid-template-areas:
+    "image-section-one image-section-one image-section-one"
+    "title text text"
+    "image-section-two image-section-two image-section-two"; */
+    grid-template-areas: 
+    "image-section-one"
+    "title"
+    "image-section-two"
+    "text";
+}
+
+@media (min-width: 40em) {
+  .overlaping-grid {
+    grid-template-areas:
     "image-section-one image-section-one image-section-one"
     "title text text"
     "image-section-two image-section-two image-section-two";
+  }
 }
 
 .overlaping-grid h1 {
@@ -47,15 +62,17 @@ body {
   padding: 2rem;
   text-shadow: 0 0 1rem rgb(0 0 0/ 0.2);
   z-index: 1;
-  background: red;
 }
 
 .overlaping-grid p {
   grid-area: text;
+  background-color: black;
+  color: white;
 }
 
 .overlaping-grid img {
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1; */
+  grid-column: 1 / 3;
   grid-row: image-section-one / image-section-two;
   width: 100%;
   height: 100%;
