@@ -30,17 +30,34 @@ body {
 }
 
 .overlaping-grid h1 {
+  /* how to line name work with grid areas */
   /* grid-row: span 3; */
   /* grid-row: 2 / 4; you can do this with grid columns also */
   /* grid-row: image-section-one / title; */
   /* grid-row: image-section-one / title-end; */
   /* grid-row: image-section-one / title-start; */
   /* grid-row: image-section-one / image-section-two-start; */
-  grid-row: image-section-one / image-section-two-end;
+  /* grid-row: image-section-one / image-section-two-end; */
+
+  /* creating a working layout with this */
+  grid-area: title;
+
   font-size: 4rem;
   color: white;
   padding: 2rem;
   text-shadow: 0 0 1rem rgb(0 0 0/ 0.2);
   z-index: 1;
   background: red;
+}
+
+.overlaping-grid p {
+  grid-area: text;
+}
+
+.overlaping-grid img {
+  grid-column: 1 / -1;
+  grid-row: image-section-one / image-section-two;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
