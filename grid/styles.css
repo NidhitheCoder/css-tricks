@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlaping-grid {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+
+  /* grid-template-areas: 
+  "image image image"
+  "title text text"
+  "image image image"; shows invalid property, becouse of you can't have two different
+      areas with same name(in this case image image*/ 
+
+  /* grid-auto-rows: 200px;
+  grid-auto-columns: 1fr; */
+  align-items: center;
+  /* grid-template-areas:
+    "image-section-one image-section-one image-section-one"
+    "title text text"
+    "image-section-two image-section-two image-section-two"; */
+    grid-template-areas: 
+    "image-section-one"
+    "title"
+    "image-section-two"
+    "text";
+}
+
+@media (min-width: 40em) {
+  .overlaping-grid {
+    grid-template-areas:
+    "image-section-one image-section-one image-section-one"
+    "title text text"
+    "image-section-two image-section-two image-section-two";
+  }
+}
+
+.overlaping-grid h1 {
+  /* how to line name work with grid areas */
+  /* grid-row: span 3; */
+  /* grid-row: 2 / 4; you can do this with grid columns also */
+  /* grid-row: image-section-one / title; */
+  /* grid-row: image-section-one / title-end; */
+  /* grid-row: image-section-one / title-start; */
+  /* grid-row: image-section-one / image-section-two-start; */
+  /* grid-row: image-section-one / image-section-two-end; */
+
+  /* creating a working layout with this */
+  grid-area: title;
+
+  font-size: 4rem;
+  color: white;
+  padding: 2rem;
+  text-shadow: 0 0 1rem rgb(0 0 0/ 0.2);
+  z-index: 1;
+}
+
+.overlaping-grid p {
+  grid-area: text;
+  background-color: black;
+  color: white;
+}
+
+.overlaping-grid img {
+  /* grid-column: 1 / -1; */
+  grid-column: 1 / 3;
+  grid-row: image-section-one / image-section-two;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
