@@ -1,0 +1,18 @@
+body {
+  display: grid;
+  place-items: center;
+  color: white;
+  background: orange;
+}
+
+body {
+  color: blue;
+}
+
+p {
+  color: white;
+}
+
+div p {
+ color: "yellow";
+}
