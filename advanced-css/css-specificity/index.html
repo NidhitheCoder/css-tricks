@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        background: orangered;
+      }
+    </style>
+  </head>
+  <body style="background: orchid;">
+    <h1>specificity</h1>
+    <div>
+      <p class="specificity">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur
+        iure quod animi! Deserunt accusantium ullam sequi necessitatibus commodi
+        inventore, laudantium vel odit tenetur ex a, neque officia labore hic?
+      </p>
+      <p class="source" id="source" style="color: brown">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem?
+      </p>
+    </div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <h1 class="inner">Hello</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

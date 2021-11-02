@@ -1,0 +1,2 @@
+### CSS Specificity
+- CSS specificity is a weight that is applied to a given CSS declaration, determined by the number of each selector type in the machine selector.when multiple declarations have equal specificity.
