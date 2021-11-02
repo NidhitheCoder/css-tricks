@@ -9,10 +9,34 @@ body {
   color: blue;
 }
 
+.specificity {
+  color: black;
+}
+
 p {
-  color: white;
+  color: white !important;
 }
 
 div p {
- color: "yellow";
+ color: yellow;
+}
+
+p {
+  color: green;
+}
+
+div div div div div div div div div h1 {
+  color: brown;
+}
+
+.inner {
+  color: cyan;
+}
+
+.source {
+  color: yellowgreen;
+}
+
+#source {
+  color: steelblue ;
 }
