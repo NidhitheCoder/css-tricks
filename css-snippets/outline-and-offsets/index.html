@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      padding: 5em;
+      text-align: center;
+    }
+
+    .box {
+      background: aquamarine;
+      padding: 2em;
+      width: 50%;
+      margin: 0em auto 10em;
+      /* border: 5px solid black; */
+      /* outline: 5px solid white;  */
+      outline: 5px solid aquamarine;
+      /* // outline have no specific side like bottom,top, left and right */
+      outline-offset: 5px;
+      /* outline-offset: -20px; */
+    }
+
+    .button {
+      text-decoration: none;
+      display: inline-block;
+      background: steelblue;
+      padding: 1em 3em;
+      color: white;
+      outline: 3px solid steelblue;
+      transition: all ease-in-out 300ms;
+    }
+
+    .button:hover {
+      outline: 3px solid steelblue;
+      outline-offset: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    Hello World
+  </div>
+
+  <a href="" class="button">Hello</a>
+</body>
+</html>
