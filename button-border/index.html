@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+
+    .item {
+      position: relative;
+    }
+
+    .item span {
+      background-color: blue;
+      position: absolute;
+    }
+
+    .top-border {
+      top: 0;
+      left: -5vh;
+      width: 20vw;
+      height: 0.2rem;
+    }
+
+    .left-border {
+      top: -5vh;
+      left: 0;
+      height: 20vw;
+      width: 0.2rem;
+    }
+
+    .right-border {
+      bottom: -5vh;
+      right: 0;
+      height: 100%;
+      width: 0.2rem;
+    }
+
+    .bottom-border {
+      bottom: 0;
+      right: -5vh;
+      width: 100%;
+      height: 0.2rem;
+    }
+
+    .content {
+      width: 60vw;
+      height: 40vh;
+      padding: 2rem 0 0 2rem;
+      display: flex;
+      position: relative;
+    }
+
+    .content img {
+      height: 45vh;
+    }
+
+    .desc {
+      display: flex;
+      flex-direction: column;
+      padding: 5rem;
+      overflow: hidden;
+      justify-content: space-between;
+    }
+
+    .desc p {
+      text-align: right;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="item">
+    <span class="top-border"></span>
+    <span class="right-border"></span>
+    <span class="bottom-border"></span>
+    <span class="left-border"></span>
+    <div class="content">
+      <img src="./surya.jpg">
+      <div class="desc">
+        <h2>TOYOTA</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta mollitia veritatis assumenda
+          aliquam odio magni illo, facilis tempore, unde ex dolorum tempora doloribus adipisci neque nihil saepe. Aliquid,
+          magnam temporibus.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
