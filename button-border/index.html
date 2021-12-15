@@ -15,13 +15,27 @@
     }
 
     body {
-      display: grid;
-      place-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       min-height: 100vh;
+      width: 100%;
+    }
+
+    .container {
+      max-width: 80vw;
     }
 
     .item {
       position: relative;
+      max-width: 60vw;
+      margin-bottom: 2rem;
+      float: left;
+    }
+
+    .item:nth-child(even) {
+      float: right;
     }
 
     .item span {
@@ -46,14 +60,14 @@
     .right-border {
       bottom: -5vh;
       right: 0;
-      height: 100%;
+      height: 80%;
       width: 0.2rem;
     }
 
     .bottom-border {
       bottom: 0;
       right: -5vh;
-      width: 100%;
+      width: 80%;
       height: 0.2rem;
     }
 
@@ -65,7 +79,7 @@
       position: relative;
     }
 
-    .content img {
+    .content img, .content-left img {
       height: 45vh;
     }
 
@@ -81,10 +95,51 @@
       text-align: right;
       text-overflow: ellipsis;
     }
+
+    /* second items */
+    .content-left {
+      width: 60vw;
+      height: 40vh;
+      padding-right: 2rem;
+      padding-top: 2rem;
+      display: flex;
+      position: relative;
+    }
+
+    .top-border-2 {
+      top: 0;
+      right: -5vh;
+      width: 20vw;
+      height: 0.2rem;
+    }
+
+    .left-border-2 {
+      bottom: -5vh;
+      left: 0;
+      height: 20vw;
+      width: 0.2rem;
+    }
+
+    .right-border-2 {
+      top: -5vh;
+      right: 0;
+      height: 80%;
+      width: 0.2rem;
+    }
+
+    .bottom-border-2 {
+      bottom: 0;
+      left: -5vh;
+      width: 80%;
+      height: 0.2rem;
+    }
+
   </style>
 </head>
 
 <body>
+  <div class="container">
+  <!-- Item-1  -->
   <div class="item">
     <span class="top-border"></span>
     <span class="right-border"></span>
@@ -102,6 +157,45 @@
       </div>
     </div>
   </div>
+
+  <!-- Item-2 -->
+  <div class="item">
+    <span class="top-border-2"></span>
+    <span class="right-border-2"></span>
+    <span class="bottom-border-2"></span>
+    <span class="left-border-2"></span>
+    <div class="content-left">
+      <div class="desc">
+        <h2>TOYOTA</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta mollitia veritatis assumenda
+          aliquam odio magni illo, facilis tempore, unde ex dolorum tempora doloribus adipisci neque nihil saepe. Aliquid,
+          magnam temporibus.
+        </p>
+      </div>
+      <img src="./surya.jpg">
+    </div>
+  </div>
+  
+  <!-- Item-3 -->
+  <div class="item">
+    <span class="top-border"></span>
+    <span class="right-border"></span>
+    <span class="bottom-border"></span>
+    <span class="left-border"></span>
+    <div class="content">
+      <img src="./surya.jpg">
+      <div class="desc">
+        <h2>TOYOTA</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta mollitia veritatis assumenda
+          aliquam odio magni illo, facilis tempore, unde ex dolorum tempora doloribus adipisci neque nihil saepe. Aliquid,
+          magnam temporibus.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
