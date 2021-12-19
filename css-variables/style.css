@@ -12,8 +12,9 @@
 }
 
 body {
-  background-color: var(--bg-color, pink);
+  background-color: var('--div-bg-color', #333);
 }
+
 .child {
   background-color: var(--div-bg-color);
   color: var(--text-color);
