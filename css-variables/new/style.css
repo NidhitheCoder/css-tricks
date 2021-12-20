@@ -8,6 +8,7 @@
 
 :root {
   --title-color: pink;
+  --title-padding: 2rem;
 }
 
 /* Main styles */
@@ -43,36 +44,36 @@ p {
 }
 .one h2 {
   color: var(--title-color);
-  padding: 2rem;
+  padding: var(--title-padding);
   background: deepskyblue;
 }
 
 .two h2 {
   color: var(--title-color);
-  padding: 2rem;
+  padding: var(--title-padding);
   background: deepskyblue;
 }
 
 .three h2 {
   color: var(--title-color);
-  padding: 2rem;
+  padding: var(--title-padding);
   background: deepskyblue;
 }
 
 .four h2 {
   color: var(--title-color);
-  padding: 2rem;
+  padding: var(--title-padding);
   background: deepskyblue;
 }
 
 .five h2 {
   color: var(--title-color);
-  padding: 2rem;
+  padding: var(--title-padding);
   background: deepskyblue;
 }
 
 .six h2 {
   color: var(--title-color);
-  padding: 2rem;
+  padding: var(--title-padding);
   background: deepskyblue;
 }
