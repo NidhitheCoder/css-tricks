@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  css variables */
+
+:root {
+  --title-color: pink;
+}
+
+/* Main styles */
+.header {
+  width: 100vw;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.header ul li {
+  color: blueviolet;
+  padding: 4rem 2rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+p {
+  margin: 4rem 0 2rem 0;
+  color: sienna;
+}
+.one h2 {
+  color: var(--title-color);
+  padding: 2rem;
+  background: deepskyblue;
+}
+
+.two h2 {
+  color: var(--title-color);
+  padding: 2rem;
+  background: deepskyblue;
+}
+
+.three h2 {
+  color: var(--title-color);
+  padding: 2rem;
+  background: deepskyblue;
+}
+
+.four h2 {
+  color: var(--title-color);
+  padding: 2rem;
+  background: deepskyblue;
+}
+
+.five h2 {
+  color: var(--title-color);
+  padding: 2rem;
+  background: deepskyblue;
+}
+
+.six h2 {
+  color: var(--title-color);
+  padding: 2rem;
+  background: deepskyblue;
+}
