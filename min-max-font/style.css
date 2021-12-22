@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  padding: 4rem;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
