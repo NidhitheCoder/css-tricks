@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  padding: 4rem;
+  flex-direction: column;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 70%;
+  max-width: 700px; */
+  /* width: min(600px, 70%); Equals to above two lines */
+  /* width: max(500, 70%); */
+  /* width: max(400px, 20%, 50vh); */
+  width: min(500px + 10%, 600px);
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 5rem);
+  /* font-size: 5vw; */
+}
+
+p {
+  /* background: lightblue;
+  width:(200px, 90%,400px); */
+  /* font-size: 2vw; */
+  /* font-size: calc(2rem, 5vw); */
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
