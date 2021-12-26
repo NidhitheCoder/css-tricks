@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: none;
+  min-height: 100vh;
+}
+
+section:target {
+  display: block;
+}
+
+#home {
+  background-color: red;
+}
+
+#about {
+  background-color: green;
+}
