@@ -12,6 +12,29 @@
       padding: 0;
       box-sizing: border-box;
     }
+
+    body {
+      min-height: 100vh;
+      background: rosybrown;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 4rem;
+    }
+
+    .boxes {
+      display: grid;
+      place-items: center;
+      grid-template-columns: repeat(auto-fit, min-max(240px, 1fr));
+      grid-gap: 1rem;
+      width: 90%;
+      margin: 1rem auto;
+    }
+
+    .box {
+      background: rebeccapurple;
+      padding: 1rem;
+
+    }
   </style>
 </head>
 
@@ -20,6 +43,20 @@
     <h1>Hello</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia excepturi optio, quae distinctio impedit animi
       eum provident ad vitae ipsam vel aspernatur, nisi quas! Cupiditate natus eaque facilis officiis optio?</p>
+  </div>
+
+  <div class="boxes">
+    <div class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere totam nam ducimus sunt, officia
+      possimus. </div>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dolore a voluptate sunt et aperiam.
+    </div>
+    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quo ducimus odio delectus
+      eligendi magnam?</div>
+    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nam nobis facilis perspiciatis
+      laboriosam eum.</div>
+    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat minus soluta aliquam, totam
+      molestiae dolorem!</div>
+    <div class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ab et fuga ut alias itaque.</div>
   </div>
 </body>
 
