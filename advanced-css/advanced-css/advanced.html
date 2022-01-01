@@ -17,9 +17,6 @@
     body {
       min-height: 100vh;
       background: rosybrown;
-      width: 90%;
-      margin: 0 auto;
-      margin-top: 4rem;
     }
 
     .boxes {
@@ -63,10 +60,44 @@
       grid-area: 'box';
       color: blue;
     }
+
+    .landing {
+      display: grid;
+      place-items: center;
+      background-color: #000;
+      min-height: 100vh;
+    }
+
+    .header {
+      box-shadow: 0 0 65px orange;
+    }
+
+    .header h1 {
+      color: orange;
+      animation: landing ;
+      animation-delay: 4s;
+    }
+
+    @keyframes landing {
+      from {
+        font-size: 1rem;
+        color: white;
+      }
+      to {
+        font-size: 5rem;
+        color: red;
+      }
+    }
   </style>
 </head>
 
 <body>
+
+  <div class="landing">
+    <div class="header">
+      <h1>Welcome</h1>
+    </div>
+  </div>
   <div class="contianer">
     <h1>Hello</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia excepturi optio, quae distinctio impedit animi
