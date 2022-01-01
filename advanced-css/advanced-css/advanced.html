@@ -11,6 +11,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: sans-serif;
     }
 
     body {
@@ -24,16 +25,43 @@
     .boxes {
       display: grid;
       place-items: center;
-      grid-template-columns: repeat(auto-fit, min-max(240px, 1fr));
+      /* grid-template-columns: repeat(auto-fit, min-max(240px, 1fr)); */
+      /* grid-template-rows: 50px 1fr 30px; */
+      /* grid-template-columns: repeat(3, 1fr); */
       grid-gap: 1rem;
       width: 90%;
       margin: 1rem auto;
+      grid-template-areas: "box-item box"
+      "box-item box"
+      "box-item box" ; 
     }
 
     .box {
       background: rebeccapurple;
       padding: 1rem;
+      grid-area: 'box-item';
+      color: orange;
+      animation-name: example;
+      animation-duration: 4s;
 
+    }
+
+   /* The animation code */
+    @keyframes example {
+      from {
+        background-color: rose;
+        width:80%;
+      }
+      to {
+        background-color: pink;
+        width: 100%;
+      }
+    }
+
+    .box:nth-child(odd) {
+      background: orange;
+      grid-area: 'box';
+      color: blue;
     }
   </style>
 </head>
