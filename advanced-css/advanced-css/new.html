@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="box">
+      <p>Welcome</p>
+    </div>
+  </div>
+  <script>
+    let dots = [...document.querySelectorAll('.dots')];
+
+    for (let index = 0; index < 300; index++) {
+      var dot = document.createElement("div");
+      dot.classList.add('dots');
+      let num = Math.floor(Math.random() * 50);
+      let num2 = Math.floor(Math.random() * 50);
+      const clr1 = Math.floor(Math.random() * 255);
+      const clr2 = Math.floor(Math.random() * 255)
+      const clr3 = Math.floor(Math.random() * 255)
+      dot.style.top =  (num  * Math.floor(Math.random() * 5) ) + 'rem';
+      dot.style.left =  (num * num2) + 'rem';
+      dot.style.background = '#' + clr1 + clr2 + clr3;
+
+      let container = document.getElementById('container');
+      console.log(container)
+      container.appendChild(dot);
+      
+    }
+  </script>
+</body>
+</html>
