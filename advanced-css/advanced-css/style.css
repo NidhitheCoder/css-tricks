@@ -12,7 +12,7 @@
   width: 100%;
   background-color: #11112d;
   color: white;
-  font-size: 5rem;
+  font-padding: 5rem;
 }
 
 .box {
@@ -56,4 +56,41 @@ p {
   background: orange;
   padding: 4rem;
   position: absolute;
+  animation: blink 4s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    padding: 0;
+  }
+  10% {
+    padding: 0.1;
+  }
+  20% {
+    padding: 0.2;
+  }
+  30% {
+    padding: 0.3;
+  }
+  40% {
+    padding: 0.4;
+  }
+  50% {
+    padding: 0.5;
+  }
+  60% {
+    padding: 0.6;
+  }
+  70% {
+    padding: 0.7;
+  }
+  80% {
+    padding: 0.8;
+  }
+  90% {
+    padding: 0.9;
+  }
+  100% {
+    padding: 1;
+  }
 }

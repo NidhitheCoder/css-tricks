@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="container">
     <div class="box">
       <p>Welcome</p>
     </div>
@@ -17,14 +17,19 @@
     let dots = [...document.querySelectorAll('.dots')];
 
     for (let index = 0; index < 100; index++) {
-      let dot = `<div class="dots"></div>`;
+      var dot = document.createElement("div");
+      dot.classList.add('dots');
       let num = Math.floor(Math.random() * 50);
       let num2 = Math.floor(Math.random() * 50);
-      console.log(num)
-      dot.style.top =  (num ) + 'rem';
+      const clr1 = Math.floor(Math.random() * 255);
+      const clr2 = Math.floor(Math.random() * 255)
+      const clr3 = Math.floor(Math.random() * 255)
+      dot.style.top =  (num  * Math.floor(Math.random() * 5) ) + 'rem';
       dot.style.left =  (num * num2) + 'rem';
+      dot.style.background = '#' + clr1 + clr2 + clr3;
 
-      let container = document.getElementsByClassName('container');
+      let container = document.getElementById('container');
+      console.log(container)
       container.appendChild(dot);
       
     }
