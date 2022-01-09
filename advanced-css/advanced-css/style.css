@@ -50,3 +50,10 @@ p {
     transform: rotate(360deg);
   }
 }
+
+.dots {
+  border-radius: 50%;
+  background: orange;
+  padding: 4rem;
+  position: absolute;
+}

@@ -13,5 +13,21 @@
       <p>Welcome</p>
     </div>
   </div>
+  <script>
+    let dots = [...document.querySelectorAll('.dots')];
+
+    for (let index = 0; index < 100; index++) {
+      let dot = `<div class="dots"></div>`;
+      let num = Math.floor(Math.random() * 50);
+      let num2 = Math.floor(Math.random() * 50);
+      console.log(num)
+      dot.style.top =  (num ) + 'rem';
+      dot.style.left =  (num * num2) + 'rem';
+
+      let container = document.getElementsByClassName('container');
+      container.appendChild(dot);
+      
+    }
+  </script>
 </body>
 </html>
