@@ -1,0 +1,73 @@
+ :root {
+   --primary-bg-color: rgb(13, 17, 23);
+   --primary-color: rgb(201, 209, 217);
+   --gray-shadow: rgba(27, 31, 35, 0.04);
+ }
+ 
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+ }
+
+ /*  Common items */
+ body {
+  background-color: var(--primary-bg-color);
+ }
+
+ .container {
+   width: 100%;
+   min-height: 100vh;
+   padding: 2rem 10rem;
+   color: var(--primary-color);
+ }
+
+ /*  landing section */
+
+ .landing {
+   display: flex;
+   flex-direction: row;
+ }
+
+ .intro {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 80vh;
+   padding-right: 4rem;
+ }
+
+ .intro h1 {
+   padding-bottom: 1rem;
+ }
+
+ .intro h4 {
+   padding-bottom: 2rem;
+ }
+
+ .image-container img {
+   height: 80vh;
+   display: flex;
+   align-items: flex-end;
+ }
+
+ /* Skills section */
+
+ .top-skills {
+   display:grid;
+   place-items: centera;
+ }
+ 
+ .cards-wrapper {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 1rem;
+   min-height: 50vh;
+ }
+
+ .card {
+  background: orange;
+  box-shadow: var(--gray-shadow);
+  padding: 2rem;
+ }
