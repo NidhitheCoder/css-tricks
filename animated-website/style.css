@@ -62,18 +62,29 @@
 
  .top-skills {
    display:grid;
-   place-items: centera;
+   place-items: center;
+   min-height: 100vh;
  }
  
  .cards-wrapper {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   grid-gap: 1rem;
-   min-height: 50vh;
+   grid-gap: 4rem;
+   height: auto;
  }
 
  .card {
-  background: orange;
-  box-shadow: var(--gray-shadow);
+  background: rgba(255, 165, 0, 0.8);
+  box-shadow: 0 0 10px 10px rgba(255, 165, 0, 0.8);
+  min-height: 50vh;
+  transition: all 0.5s ease-in-out;
   padding: 2rem;
+  border-radius: 8px;
+ }
+
+ .card:hover {
+   box-shadow: none;
+   box-shadow: 0 0 10px 10px transparent;
+   transform: scale(1.1);
+   background: rgba(255, 165, 0, 0.8);
  }
