@@ -88,3 +88,45 @@
    transform: scale(1.1);
    background: rgba(255, 165, 0, 0.8);
  }
+
+ /* Feature section */
+
+ .features {
+   display: flex;
+   flex-direction: row;
+ align-items: center;
+   position: relative;
+   margin: 4rem 0;
+   min-height: 80vh;
+ }
+
+ .features .card {
+   width: 20vw;
+   position: relative;
+   opacity: 0.6;
+ }
+
+ .features .card:hover .description-wrapper{
+   color: seagreen;
+ }
+
+ .features:nth-child(even) {
+   flex-direction: row-reverse;
+ }
+
+ .features:nth-child(even) .description-wrapper{
+  color: rebeccapurple;
+  text-align: right;
+  top: 20%;
+  right: 10%;
+  position: absolute;
+}
+
+.description-wrapper {
+   display: flex;
+   flex-direction: column;
+   height: auto;
+   position: absolute;
+   top: 20%;
+   left: 10%;
+ }
