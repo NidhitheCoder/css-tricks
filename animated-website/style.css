@@ -101,7 +101,7 @@
  }
 
  .features .card {
-   width: 20vw;
+   width: 40vw;
    position: relative;
    opacity: 0.6;
  }
@@ -115,18 +115,42 @@
  }
 
  .features:nth-child(even) .description-wrapper{
-  color: rebeccapurple;
   text-align: right;
-  top: 20%;
   right: 10%;
   position: absolute;
 }
 
 .description-wrapper {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.6em;
    display: flex;
    flex-direction: column;
    height: auto;
    position: absolute;
-   top: 20%;
+   top: 50%;
+   transform: translateY(-50%);
    left: 10%;
  }
+
+ .features:nth-child(1) .card {
+background-color: blue;
+box-shadow: 0 0 10px 10px blue;
+ }
+
+ .features:nth-child(2) .card {
+background-color: greenyellow;
+box-shadow: 0 0 10px 10px greenyellow;
+}
+
+.features:nth-child(3) .card {
+  background-color: purple;
+  box-shadow: 0 0 10px 10px purple;
+
+}
+
+.features:nth-child(4) .card {
+  background-color: yellow;
+  box-shadow: 0 0 10px 10px yellow;
+
+}
