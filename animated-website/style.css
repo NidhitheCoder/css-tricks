@@ -8,7 +8,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: sans-serif;
+   font-family: 'Times New Roman', Times, serif;
  }
 
  /*  Common items */
@@ -103,11 +103,12 @@
  .features .card {
    width: 40vw;
    position: relative;
-   opacity: 0.6;
+   opacity: 0.2;
  }
 
- .features .card:hover .description-wrapper{
+ .features:hover .description-wrapper{
    color: seagreen;
+   transform: scale(1.1);
  }
 
  .features:nth-child(even) {
@@ -121,7 +122,7 @@
 }
 
 .description-wrapper {
-  font-size: 18px;
+  font-size: 0.2;
   font-weight: bold;
   line-height: 1.6em;
    display: flex;
