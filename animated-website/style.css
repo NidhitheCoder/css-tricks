@@ -38,6 +38,7 @@ html {
    scroll-snap-align: start;
    color: var(--primary-color);
    box-shadow: 0px 0px 100px 50px black inset;
+   position: relative;
  }
 
  /*  landing section */
@@ -82,10 +83,11 @@ html {
  .image-container {
   z-index: 3;
   background-image: url('./assets//me.jpeg');
-  height: 70vh;
+  height: 80vh;
   width: 100%;
-  box-shadow: 0px 0px 120px 140px var(--primary-bg-color) inset;
+  box-shadow: 0px 0px 150px 250px var(--primary-bg-color) inset;
   background-position: bottom;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
  }
 
  /* Skills section */
@@ -131,6 +133,8 @@ html {
   transition-property: font-size;
   transition-duration: 4s;
   transition-delay: 2s;
+  display: grid;
+  place-items: center;
  }
 
  /* Feature section */
@@ -140,6 +144,7 @@ html {
    align-items: center;
    position: relative;
    height: 100vh;
+   overflow: hidden;
  }
 
  .features .card {
@@ -199,3 +204,24 @@ box-shadow: 0 0 10px 10px greenyellow;
   box-shadow: 0 0 10px 10px yellow;
 
 }
+
+.view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  /* let the browser know we plan to animate
+     each view in and out */
+  will-change: transform;
+  background: purple;
+  /* height: 300px;
+  width: 300px; */
+}
+
+
+.view {
+  transition: transform 0.6s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}
+
