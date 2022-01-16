@@ -27,6 +27,8 @@ html {
  /*  Common items */
  body {
   background-color: var(--primary-bg-color);
+  width: 100vw;
+  overflow-x: hidden;
  }
 
  .container {
@@ -45,6 +47,20 @@ html {
    grid-template-columns: repeat(2, 1fr);
    place-items: center;
    flex-direction: row;
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+ }
+
+ .overlay {
+   position: absolute;
+   top: 0;
+   left: -20vw;
+   right: -20vw;
+   bottom: 0;
+   z-index: 2;
+   background-color: rgba(170, 46, 207, 0.2);
+   transform: rotate(45deg);
  }
 
  .intro {
@@ -78,29 +94,43 @@ html {
    display:grid;
    place-items: center;
    min-height: 100vh;
+   position: relative;
  }
+
+ .top-skills-overlay {
+  position: absolute;
+  top: 0;
+  left: -40vw;
+  right: -40vw;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-45deg);
+}
+
+.top-skills-overlay:hover {
+  background-color: rgba(0,0,0,0.2);
+}
  
  .cards-wrapper {
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   grid-gap: 4rem;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 8rem;
    height: auto;
  }
 
  .card {
-  background: rgba(255, 165, 0, 0.8);
-  box-shadow: 0 0 10px 10px rgba(255, 165, 0, 0.8);
+  background: rgba(170, 46, 207, 0.2);
+  box-shadow: 0 0 10px 10px rgba(170, 46, 207, 0.2);
   min-height: 50vh;
   transition: all 0.5s ease-in-out;
   padding: 2rem;
   border-radius: 8px;
- }
-
- .card:hover {
-   box-shadow: none;
-   box-shadow: 0 0 10px 10px transparent;
-   transform: scale(1.1);
-   background: rgba(255, 165, 0, 0.8);
+  font-size: 14px;
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
  }
 
  /* Feature section */
@@ -120,7 +150,7 @@ html {
 
  .features:hover .features,  .features:hover .card {
    color: seagreen;
-   transform: scale(1.4);
+   transform: scale(1.1);
  }
 
  .features:nth-child(even) {
