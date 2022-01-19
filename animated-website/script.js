@@ -1,9 +1,3 @@
-// let featuresections = [...document.querySelectorAll('.features')];
-// featuresections.map(feature => {
-//   feature.addEventListener('show', () => {
-//     console.log('Hovered')
-//   })
-// })
 
 const init = function() {
   let items = document.querySelectorAll(".features .card");

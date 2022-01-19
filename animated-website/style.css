@@ -120,7 +120,7 @@ html {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-gap: 8rem;
-   height: auto;
+   /* height: auto; */
  }
 
  .card {
