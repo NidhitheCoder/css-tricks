@@ -5,6 +5,7 @@
    --primary-bg-color: rgb(13, 17, 23);
    --primary-color: rgb(201, 209, 217);
    --gray-shadow: rgba(27, 31, 35, 0.04);
+   --secondary-color: rgba(170, 46, 207, 0.2);
  }
  
  * {
@@ -60,7 +61,7 @@ html {
    right: -20vw;
    bottom: 0;
    z-index: 2;
-   background-color: rgba(170, 46, 207, 0.2);
+   background-color: var(--secondary-color);
    transform: rotate(45deg);
  }
 
@@ -124,8 +125,8 @@ html {
  }
 
  .card {
-  background: rgba(170, 46, 207, 0.2);
-  box-shadow: 0 0 10px 10px rgba(170, 46, 207, 0.2);
+  background: var(--secondary-color);
+  box-shadow: 0 0 10px 10px var(--secondary-color);
   min-height: 50vh;
   transition: all 0.5s ease-in-out;
   padding: 2rem;
@@ -242,7 +243,7 @@ html {
 .description-wrapper {
   font-size: 1rem;
   font-weight: bold;
-  /* word-spacing: 0.5rem; */
+  /* word-spacing: 0.10rem; */
   letter-spacing: 0.1rem;
   line-height: 1.6em;
   display: flex;
@@ -299,26 +300,55 @@ box-shadow: 0 0 10px 10px greenyellow;
   flex-wrap: wrap;
 }
 
-.rohmbus {
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  background-color: blue;
-  height: 15vw;
-  width: 15vw;
-  color: orange;
-  display: grid;
-  place-items: center;
+.round-container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--secondary-color);
+  transition: all 0.5 ease-in-out;
 }
 
+.round-container::before, .round-container::after {
+  content: '---------------------------------------------------';
+  color: red;
+  height: 2rem;
+  width: 100vw;
+  position: absolute;
+  transition: all 2 ease-in-out;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+}
+
+.round-container::before {
+  top: 5rem;
+  left: 10vw;
+}
+
+.round-container:hover::before{
+  left: 80vw;
+}
+
+.round-container::after {
+  bottom: 5rem;
+  left: 80vw;
+}
+
+.round-container:hover::after{
+  left: 10vw;
+}
 
 .rounds {
-  clip-path: circle(50% at 50% 50%);
+  padding: 2rem;
+  position: relative;
+  width: 15rem;
+  height: 15rem;
   background-color: red;
-  padding: 5rem;
-  position: absolute;
-  z-index: 3;
-  animation: scaleRrund 10s linear infinite;
+  z-index: 5;
+  border-radius: 8px;
 }
-
 
 @keyframes scaleRrund {
   0% {
@@ -338,56 +368,48 @@ box-shadow: 0 0 10px 10px greenyellow;
   }
 }
 
-@keyframes rotateRound {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.rounds:hover::after{
+  transform: rotate(75deg);
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 
-
-.rounds:nth-child(1) {
-  top: 5rem;
-  left: 5rem;
-}
-
-.rounds:nth-child(2) {
-  top: 5rem;
-  right: 5rem;
-}
-
-.rounds:nth-child(3) {
-  bottom: 5rem;
-  left: 5rem;
-}
-
-
-.rounds:nth-child(4) {
-  bottom: 5rem;
-  right: 5rem;
-}
-
-.rounds::after{
+.rounds::after {
+  width: 15rem;
+  height: 15rem;
+  transition: all 1s ease-in-out;
   content: '';
-  width: 5rem;
-  height: 5rem;
-  background-color: blue;
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
+  top: 0;
+  left: 0;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+  transform-origin: 100% 100%;
+  opacity: 1;
+  border-radius: 8px;
+}
+
+.rounds::before{
+  content:'🦸‍♂️';
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  transition: all 2 ease-in-out;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+  border-radius: 2px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+}
+
+.rounds:hover::before{
+  scale: 2;
   z-index: 10;
-  transform-origin: top;
-  animation: rotateRound 5s linear infinite;
+  opacity: 1;
 }
