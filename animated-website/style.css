@@ -416,8 +416,12 @@ box-shadow: 0 0 10px 10px greenyellow;
 
 
 @media screen and (max-width: 768px){
+
+  /* Landing section */
   .container {
     padding: 2rem;
+    scroll-snap-align: none;
+    overflow-y: visible;
   }
 
   .landing {
@@ -431,8 +435,32 @@ box-shadow: 0 0 10px 10px greenyellow;
   }
 
   .image-container {
-    box-shadow: 0px 0px 150px 150px var(--primary-bg-color) inset;
+    box-shadow: 0px 0px 150px 160px var(--primary-bg-color) inset;
     background-position: center;
-    height: 50vh;
+    height: 60vh;
+    position: absolute;
+    top: 20%;
+  }
+
+  /* top skills section */
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  /* feature section */
+  .features {
+    overflow-y: visible;
+  }
+  /* Round secrion */
+  .round-container {
+    flex-direction: column;
+  }
+
+  .rounds-container, .rounds-container::before {
+    display: none;
+  }
+
+  .rounds {
+    margin-bottom: 2rem;
   }
 }
