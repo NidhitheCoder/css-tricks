@@ -413,3 +413,26 @@ box-shadow: 0 0 10px 10px greenyellow;
   z-index: 10;
   opacity: 1;
 }
+
+
+@media screen and (max-width: 768px){
+  .container {
+    padding: 2rem;
+  }
+
+  .landing {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    height: 30vh;
+    padding: 0;
+    text-align: center;
+  }
+
+  .image-container {
+    box-shadow: 0px 0px 150px 150px var(--primary-bg-color) inset;
+    background-position: center;
+    height: 50vh;
+  }
+}
