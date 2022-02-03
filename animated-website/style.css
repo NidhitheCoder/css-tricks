@@ -414,6 +414,22 @@ box-shadow: 0 0 10px 10px greenyellow;
   opacity: 1;
 }
 
+/* Carousal contaniner */
+.carousal-container {
+  scroll-snap-align: start;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+.carousal-item {
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 
 @media screen and (max-width: 768px){
 
@@ -421,7 +437,7 @@ box-shadow: 0 0 10px 10px greenyellow;
   .container {
     padding: 2rem;
     scroll-snap-align: none;
-    overflow-y: visible;
+    overflow-x: hidden;
   }
 
   .landing {
@@ -443,6 +459,10 @@ box-shadow: 0 0 10px 10px greenyellow;
   }
 
   /* top skills section */
+
+  .top-skills {
+    padding-bottom: 6rem;
+  }
   .cards-wrapper {
     grid-template-columns: 1fr;
   }
@@ -456,7 +476,7 @@ box-shadow: 0 0 10px 10px greenyellow;
     flex-direction: column;
   }
 
-  .rounds-container, .rounds-container::before {
+  .round-container::after, .round-container::before {
     display: none;
   }
 
