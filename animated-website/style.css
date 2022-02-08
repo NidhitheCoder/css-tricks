@@ -417,19 +417,22 @@ box-shadow: 0 0 10px 10px greenyellow;
 /* Carousal contaniner */
 .carousal-container {
   scroll-snap-align: start;
+  scroll-behavior: smooth;
   position: relative;
   width: 100%;
   min-height: 100vh;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .carousal-item {
-  background-color: green;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  background-color: hotpink;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 @media screen and (max-width: 768px){
 

@@ -18,7 +18,7 @@
     <div class="intro">
       <h1>Nidheesh Parameswaran</h1>
       <h4>Frontend Developer</h4>
-      <p>My name is Nidheesh, A passionate software engineer focused on depth of javascript and css.</p>
+      <p>My name is Nidheesh, A passionate software engineer focused on depth of javascript and css. I am a big fan of pure javascript and css.</p>
     </div>
     <div class="image-container">
     </div>
@@ -128,7 +128,7 @@
     </div>
   </div>
 
-  <div class="carousal-container">
+  <div class="carousal-container" id="carousal-slider">
     <div class="carousal-item">1</div>
     <div class="carousal-item">3</div>
     <div class="carousal-item">2</div>
@@ -138,5 +138,18 @@
   </div>
 </body>
 <script src='script.js'></script>
+<script>
+  const container = document.getElementById('carousal-slider');
 
+  container.addEventListener('wheel', (e) => {
+    console.log(e.deltaY, screen.width, container.scrollLeft);
+    if (e.deltaY > 0) {
+      container.scrollLeft = container.scrollLeft + window.innerWidth;
+    }
+    else {
+      container.scrollLeft = container.scrollLeft - window.innerWidth;
+    }
+    console.log(container.scrollLeft);
+  });
+</script>
 </html>
