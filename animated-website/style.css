@@ -432,6 +432,20 @@ box-shadow: 0 0 10px 10px greenyellow;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.line {
+  width: 20vw;
+  background-color: blue;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.carousal-item:nth-child(2) .line {
+  width: 40vw;
 }
 
 @media screen and (max-width: 768px){

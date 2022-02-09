@@ -18,7 +18,8 @@
     <div class="intro">
       <h1>Nidheesh Parameswaran</h1>
       <h4>Frontend Developer</h4>
-      <p>My name is Nidheesh, A passionate software engineer focused on depth of javascript and css. I am a big fan of pure javascript and css.</p>
+      <p>My name is Nidheesh, A passionate software engineer focused on depth of javascript and css. I am a big fan of
+        pure javascript and css.</p>
     </div>
     <div class="image-container">
     </div>
@@ -129,12 +130,25 @@
   </div>
 
   <div class="carousal-container" id="carousal-slider">
-    <div class="carousal-item">1</div>
-    <div class="carousal-item">3</div>
-    <div class="carousal-item">2</div>
-    <div class="carousal-item">4</div>
-    <div class="carousal-item">5</div>
-    <div class="carousal-item">6</div>
+    <div class="carousal-item">
+      <div class="line"></div>
+      1
+    </div>
+    <div class="carousal-item">
+      <div class="line"></div>3
+    </div>
+    <div class="carousal-item">
+      <div class="line"></div>2
+    </div>
+    <div class="carousal-item">
+      <div class="line"></div>4
+    </div>
+    <div class="carousal-item">
+      <div class="line"></div>5
+    </div>
+    <div class="carousal-item">
+      <div class="line"></div>6
+    </div>
   </div>
 </body>
 <script src='script.js'></script>
@@ -142,7 +156,6 @@
   const container = document.getElementById('carousal-slider');
 
   container.addEventListener('wheel', (e) => {
-    console.log(e.deltaY, screen.width, container.scrollLeft);
     if (e.deltaY > 0) {
       container.scrollLeft = container.scrollLeft + window.innerWidth;
     }
@@ -152,4 +165,5 @@
     console.log(container.scrollLeft);
   });
 </script>
+
 </html>

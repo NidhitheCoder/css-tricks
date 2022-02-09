@@ -9,10 +9,3 @@ const init = function() {
   cssScrollSnapPolyfill();
 };
 init();
-
-
-const carousalContainer = document.getElementById('carousal-slider');
-
-carousalContainer.addEventListener('onWheel', (e) => {
-  console.log(e.deltaY);
-});
