@@ -132,38 +132,24 @@
   <div class="carousal-container" id="carousal-slider">
     <div class="carousal-item">
       <div class="line"></div>
-      1
+      <h2 id="title"></h2>
+      <div id="content"></div>
     </div>
-    <div class="carousal-item">
-      <div class="line"></div>3
-    </div>
-    <div class="carousal-item">
-      <div class="line"></div>2
-    </div>
-    <div class="carousal-item">
-      <div class="line"></div>4
-    </div>
-    <div class="carousal-item">
-      <div class="line"></div>5
-    </div>
-    <div class="carousal-item">
-      <div class="line"></div>6
-    </div>
+   
   </div>
 </body>
 <script src='script.js'></script>
 <script>
-  const container = document.getElementById('carousal-slider');
-
-  container.addEventListener('wheel', (e) => {
-    if (e.deltaY > 0) {
-      container.scrollLeft = container.scrollLeft + window.innerWidth;
-    }
-    else {
-      container.scrollLeft = container.scrollLeft - window.innerWidth;
-    }
-    console.log(container.scrollLeft);
-  });
+  // const container = document.getElementById('carousal-slider');
+  // container.addEventListener('wheel', (e) => {
+  //   if (e.deltaY > 0) {
+  //     container.scrollLeft = container.scrollLeft + window.innerWidth;
+  //   }
+  //   else {
+  //     container.scrollLeft = container.scrollLeft - window.innerWidth;
+  //   }
+  //   // console.log(container.scrollLeft);
+  // });
 </script>
 
 </html>

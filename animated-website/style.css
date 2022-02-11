@@ -430,9 +430,15 @@ box-shadow: 0 0 10px 10px greenyellow;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  color: white;
+}
+
+#title {
+  color: white;
 }
 
 .line {
