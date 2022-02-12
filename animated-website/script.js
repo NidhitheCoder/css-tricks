@@ -31,11 +31,15 @@ let sampleArr = [
 let length = sampleArr.length;
 let i = 0;
 
+const container = document.getElementById('carousal-slider');
+
 function getData() {
   if (i < length) {
     let intervalId;
     const title = document.getElementById('title');
     const content = document.getElementById('content');
+    const sliderItem = document.getElementsByClassName('carousal-item');
+    sliderItem.style.backgroundColor = `#234${Math.random() * 1000}`;
     title.textContent = sampleArr[i].title;
     content.textContent = sampleArr[i].content;
     i++;
@@ -46,5 +50,4 @@ function getData() {
     getData();
   }
 };
-
-getData();
+container.addEventListener('hover', getData());

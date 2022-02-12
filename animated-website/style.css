@@ -426,7 +426,7 @@ box-shadow: 0 0 10px 10px greenyellow;
   flex-wrap: nowrap;
 }
 .carousal-item {
-  background-color: hotpink;
+  background-color: purple;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -435,6 +435,19 @@ box-shadow: 0 0 10px 10px greenyellow;
   align-items: center;
   position: relative;
   color: white;
+}
+
+.carousal-card {
+  height: 80vh;
+  width: 40vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
 }
 
 #title {
