@@ -1,5 +1,5 @@
 
-const init = function() {
+const init = function () {
   let items = document.querySelectorAll(".features .card");
   for (let i = 0; i < items.length; i++) {
     const randomClr = randomColor({ luminosity: "light" });
@@ -12,21 +12,21 @@ init();
 
 let sampleArr = [
   {
-  title: 'Title 1',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, harum!'
-},
-{
-  title: 'Title 2',
-  content: 'psum dolor sit amet, consectetur adipisicing elit. At, harum!'
-},
-{
-  title: 'Title 3',
-  content: 'ipsum dolor sit amet, consectetur adipisicing elit. At, harum!'
-},
-{
-  title: 'Title 4',
-  content: 'hello ipsum dolor sit amet, consectetur adipisicing elit. At, harum!'
-},
+    title: 'Title 1',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, harum!'
+  },
+  {
+    title: 'Title 2',
+    content: 'psum dolor sit amet, consectetur adipisicing elit. At, harum!'
+  },
+  {
+    title: 'Title 3',
+    content: 'ipsum dolor sit amet, consectetur adipisicing elit. At, harum!'
+  },
+  {
+    title: 'Title 4',
+    content: 'hello ipsum dolor sit amet, consectetur adipisicing elit. At, harum!'
+  },
 ];
 let length = sampleArr.length;
 let i = 0;
@@ -39,10 +39,20 @@ function getData() {
     const title = document.getElementById('title');
     const content = document.getElementById('content');
     const sliderItem = document.getElementsByClassName('carousal-item')[0];
- const red = Math.random() * 255;
- const blue = Math.random() * 255;
- const green = Math.random() * 255;
+    const red = Math.random() * 255;
+    const blue = Math.random() * 255;
+    const green = Math.random() * 255;
     sliderItem.style.backgroundColor = `rgb(${red},${green},${blue})`;
+    //  Change indication
+    const indicators = [...document.querySelectorAll('.indicator')];
+    indicators.map((indicator, index) => {
+      if (index === i) {
+        indicator.style.backgroundColor = 'green';
+      } else {
+        indicator.style.backgroundColor = 'transparent';
+      }
+    });
+
     title.textContent = sampleArr[i].title;
     content.textContent = sampleArr[i].content;
     i++;
