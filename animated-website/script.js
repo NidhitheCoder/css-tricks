@@ -38,8 +38,11 @@ function getData() {
     let intervalId;
     const title = document.getElementById('title');
     const content = document.getElementById('content');
-    const sliderItem = document.getElementsByClassName('carousal-item');
-    sliderItem.style.backgroundColor = `#234${Math.random() * 1000}`;
+    const sliderItem = document.getElementsByClassName('carousal-item')[0];
+ const red = Math.random() * 255;
+ const blue = Math.random() * 255;
+ const green = Math.random() * 255;
+    sliderItem.style.backgroundColor = `rgb(${red},${green},${blue})`;
     title.textContent = sampleArr[i].title;
     content.textContent = sampleArr[i].content;
     i++;
