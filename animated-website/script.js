@@ -43,6 +43,7 @@ function getData() {
     const blue = Math.random() * 255;
     const green = Math.random() * 255;
     sliderItem.style.backgroundColor = `rgb(${red},${green},${blue})`;
+    sliderItem.classList.add('mr-100');
     //  Change indication
     const indicators = [...document.querySelectorAll('.indicator')];
     indicators.map((indicator, index) => {
@@ -57,7 +58,10 @@ function getData() {
     content.textContent = sampleArr[i].content;
     i++;
     intervalId = setInterval(getData, 4000);
-    setTimeout(() => clearInterval(intervalId), 4000);
+    setTimeout(() => {
+      clearInterval(intervalId);
+      sliderItem.classList.remove('mr-100');
+    }, 4000);
   } else {
     i = 0;
     getData();

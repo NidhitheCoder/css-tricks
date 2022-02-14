@@ -435,6 +435,9 @@ box-shadow: 0 0 10px 10px greenyellow;
   align-items: center;
   position: relative;
   color: white;
+  margin-left: 100vw;
+  animation: moveSlider 3s infinite;
+  animation-delay: 1s
 }
 
 .carousal-card {
@@ -479,6 +482,30 @@ box-shadow: 0 0 10px 10px greenyellow;
   border-radius: 50%;
   border: 4px solid rebeccapurple;
   margin: 0 1rem;
+}
+
+.mr-100 {
+  margin-right: 100vw;
+  /* animation-delay: 1s; */
+}
+
+
+@keyframes moveSlider {
+  0% {
+    margin-left: 100vw;
+  }
+  25% {
+    margin-left: 75vw;
+  }
+  50% {
+    margin-left: 50vw;
+  }
+  75% {
+    margin-left: 25vw;
+  }
+  100% {
+    margin-left: 0;
+  }
 }
 
 .carousal-item:nth-child(2) .line {
