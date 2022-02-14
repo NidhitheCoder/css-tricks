@@ -436,8 +436,7 @@ box-shadow: 0 0 10px 10px greenyellow;
   position: relative;
   color: white;
   margin-left: 100vw;
-  animation: moveSlider 3s infinite;
-  animation-delay: 1s
+  animation: moveSlider 4s infinite;
 }
 
 .carousal-card {
@@ -495,13 +494,13 @@ box-shadow: 0 0 10px 10px greenyellow;
     margin-left: 100vw;
   }
   25% {
-    margin-left: 75vw;
+    margin-left: 0;
   }
   50% {
-    margin-left: 50vw;
+    margin-left: 0;
   }
   75% {
-    margin-left: 25vw;
+    margin-left: 0;
   }
   100% {
     margin-left: 0;
