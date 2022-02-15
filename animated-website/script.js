@@ -28,8 +28,24 @@ let sampleArr = [
     content: 'hello ipsum dolor sit amet, consectetur adipisicing elit. At, harum!'
   },
 ];
+const indicators = [...document.querySelectorAll('.indicator')];
 let length = sampleArr.length;
 let i = 0;
+
+const itemClick = (e) => {
+  indicators.map((indicator) => {
+    indicator.style.backgroundColor = 'transparent';
+    console.log(e);
+    if ( e.target.id === indicator.id) {
+      const idInt = +indicator.id;
+      title.textContent = sampleArr[idInt].title;
+      content.textContent = sampleArr[idInt].content;
+      i = +indicator.id + 1;
+    }
+  });
+  e.target.style.backgroundColor = 'green';
+}
+
 
 const container = document.getElementById('carousal-slider');
 
@@ -45,8 +61,8 @@ function getData() {
     sliderItem.style.backgroundColor = `rgb(${red},${green},${blue})`;
     sliderItem.classList.add('mr-100');
     //  Change indication
-    const indicators = [...document.querySelectorAll('.indicator')];
     indicators.map((indicator, index) => {
+      indicator.addEventListener('click', itemClick);
       if (index === i) {
         indicator.style.backgroundColor = 'green';
       } else {
