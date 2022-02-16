@@ -9,6 +9,7 @@ const init = function () {
   cssScrollSnapPolyfill();
 };
 init();
+let intervalId;
 
 let sampleArr = [
   {
@@ -35,11 +36,11 @@ let i = 0;
 const itemClick = (e) => {
   indicators.map((indicator) => {
     indicator.style.backgroundColor = 'transparent';
-    console.log(e);
     if ( e.target.id === indicator.id) {
       const idInt = +indicator.id;
       title.textContent = sampleArr[idInt].title;
       content.textContent = sampleArr[idInt].content;
+      clearInterval(intervalId);
       i = +indicator.id + 1;
     }
   });
@@ -51,7 +52,6 @@ const container = document.getElementById('carousal-slider');
 
 function getData() {
   if (i < length) {
-    let intervalId;
     const title = document.getElementById('title');
     const content = document.getElementById('content');
     const sliderItem = document.getElementsByClassName('carousal-item')[0];

@@ -511,6 +511,58 @@ box-shadow: 0 0 10px 10px greenyellow;
   width: 40vw;
 }
 
+/* Mosaic section */
+
+.mosaic-section {
+  display: grid;
+  grid-template-areas: "one one two two"
+                        "one one three three"
+                        "five five five eight"
+                        "four six six eight"
+                        "four seven seven seven";
+  grid-template-columns: repeat(4);
+}
+
+#one {
+  grid-area: one;
+  background-color: rebeccapurple;
+}
+
+#two {
+  grid-area: two;
+  background-color: aqua;
+}
+
+#three {
+  grid-area: three;
+  background-color: greenyellow;
+}
+
+#four {
+  grid-area: four;
+  background-color: hotpink;
+}
+
+#five {
+  grid-area: five;
+  background-color: goldenrod;
+}
+
+#six {
+  grid-area: six;
+  background-color: darkturquoise;
+}
+
+#seven {
+  grid-area: seven;
+  background-color: orange;
+}
+
+#eight {
+  grid-area: eight;
+  background-color: brown;
+}
+
 @media screen and (max-width: 768px){
 
   /* Landing section */
