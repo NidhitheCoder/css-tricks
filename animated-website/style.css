@@ -225,10 +225,21 @@ html {
    opacity: 0.2;
  }
 
- .features:hover .features,  .features:hover .card {
+ /* .features:hover .features,  .features:hover .card {
    color: seagreen;
    transform: scale(1.1);
- }
+ } */
+
+ .features:hover .description-wrapper {
+  opacity: 1;
+  display: block;
+}
+
+.description-wrapper {
+  opacity: 0.1;
+  display: none;
+  transition: all 0.4s ease-in-out;
+}
 
  .features:nth-child(even) {
    flex-direction: row-reverse;
@@ -523,6 +534,20 @@ box-shadow: 0 0 10px 10px greenyellow;
   grid-template-columns: repeat(4);
 }
 
+.mosaic-section:hover .mosic {
+  opacity: 1;
+}
+
+.mosic {
+  border: 1rem double black;
+  opacity: 0.1;
+  transition: all 0.8s ease-in-out;
+}
+
+.mosic:hover {
+  border-style: solid;
+}
+
 #one {
   grid-area: one;
   background-color: rebeccapurple;
@@ -614,5 +639,18 @@ box-shadow: 0 0 10px 10px greenyellow;
 
   .rounds {
     margin-bottom: 2rem;
+  }
+
+  .carousal-container {
+    scroll-snap-align: unset;
+  }
+
+  .carousal-card {
+    height: 60vh;
+    width: 80vw;
+  }
+
+  .indicators {
+    bottom: 10%;
   }
 }
