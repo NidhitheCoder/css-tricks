@@ -653,4 +653,13 @@ box-shadow: 0 0 10px 10px greenyellow;
   .indicators {
     bottom: 10%;
   }
+
+  .snipet {
+    display: flex;
+    border: 1px solid green;
+    background-color: rgba(0, 255, 0, 0.4);
+    transition: rotate(30deg);
+    height: 10rem;
+    width: 20vw;
+  }
 }
