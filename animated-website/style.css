@@ -696,6 +696,15 @@ box-shadow: 0 0 10px 10px greenyellow;
 .snipet:nth-child(23) {
   transform: translate(-50%, -50%) rotate(360deg);
 }
+
+/* holder container section */
+.holder-container {
+  height: 60vh;
+  width: 40vw;
+  background: orange;
+  overflow: scroll;
+}
+
 @media screen and (max-width: 768px){
 
   /* Landing section */
