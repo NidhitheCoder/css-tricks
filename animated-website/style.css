@@ -699,10 +699,34 @@ box-shadow: 0 0 10px 10px greenyellow;
 
 /* holder container section */
 .holder-container {
-  height: 60vh;
-  width: 40vw;
+  height: 80vh;
+  width: 30vw;
   background: orange;
   overflow: scroll;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+  transform-style: preserve-3d;
+  opacity: 0;
+  animation: visible-item 3s linear infinite;
+}
+
+@keyframes visible-item {
+  0%{
+      opacity: 0;
+  }
+  50%{
+      opacity: 0.5;
+  }
+  100%{
+    width: 1;
+  }
+}
+
+.holder-container:hover {
+  opacity: 1;
+}
+
+.images {
+  width: 100%;
 }
 
 @media screen and (max-width: 768px){
