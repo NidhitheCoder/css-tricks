@@ -706,7 +706,7 @@ box-shadow: 0 0 10px 10px greenyellow;
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
   transform-style: preserve-3d;
   opacity: 0;
-  animation: visible-item 3s linear infinite;
+  animation: visible-item 1s linear;
 }
 
 @keyframes visible-item {
@@ -719,6 +719,11 @@ box-shadow: 0 0 10px 10px greenyellow;
   100%{
     width: 1;
   }
+}
+
+.image-holders {
+  display: flex;
+  flex-direction: row;
 }
 
 .holder-container:hover {
