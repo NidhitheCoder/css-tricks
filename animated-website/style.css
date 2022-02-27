@@ -705,7 +705,7 @@ box-shadow: 0 0 10px 10px greenyellow;
   overflow: scroll;
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
   transform-style: preserve-3d;
-  opacity: 0;
+  opacity: 0.3;
   animation: visible-item 1s linear;
 }
 
@@ -724,6 +724,8 @@ box-shadow: 0 0 10px 10px greenyellow;
 .image-holders {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .holder-container:hover {
@@ -732,6 +734,52 @@ box-shadow: 0 0 10px 10px greenyellow;
 
 .images {
   width: 100%;
+}
+
+/* Ring section */
+.ring-container {
+  position: absolute;
+  background: cornflowerblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ring {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 2px solid orange;
+  position: absolute;
+  top: -1rem;
+  /* transform-style: flat;
+  transition-duration: 5s; */
+    animation: jump 1s linear;
+  left: 50%;
+}
+
+/* .ring-container:hover .ring{
+  /* animation: jump 1s linear; 
+  top: 40rem;
+} */
+
+@keyframes jumb {
+  0% {
+    top: -1rem;
+  }
+  25% {
+    top: 5rem;
+  }
+  50%{
+    top: 10rem;
+  }
+  75% {
+    top: 15rem ;
+  }
+  100% {
+    top: 20rem;
+  }
 }
 
 @media screen and (max-width: 768px){
