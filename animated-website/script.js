@@ -84,3 +84,19 @@ function getData() {
   }
 };
 container.addEventListener('hover', getData());
+
+// change value onclick
+
+const button = document.getElementById('add-value');
+
+const updateValue = () => {
+  const resultContainer = document.getElementById('result');
+  if (resultContainer.textContent === '11111') {
+    button.removeEventListener('click', updateValue);
+  } else {
+    resultContainer.textContent += 1;
+  }
+
+};
+
+button.addEventListener('click', updateValue);
