@@ -750,12 +750,14 @@ box-shadow: 0 0 10px 10px greenyellow;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  border: 2px solid orange;
+  border: 4px solid orange;
+  box-shadow: 0 0 10px 10px orange;
   position: absolute;
-  top: -1rem;
-  /* transform-style: flat;
-  transition-duration: 5s; */
-    animation: jump 1s linear;
+  top: 20rem;
+  transform-style: flat;
+  /* transition-duration: 5s;
+  animation: jump 1s linear; */
+  transition: all 0.4s ease-in;
   left: 50%;
 }
 
@@ -780,6 +782,49 @@ box-shadow: 0 0 10px 10px greenyellow;
   100% {
     top: 20rem;
   }
+}
+
+/* parts of items */
+
+.parts-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.parts {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  transition: all 1s ease-in-out;
+}
+
+.one {
+  top:0;
+  left: 0;
+  background: blue;
+}
+
+.two {
+  top:0;
+  right:0;
+  background: orange;
+}
+
+.three {
+  bottom: 0;
+  left: 0;
+  background: rebeccapurple;
+}
+
+.four {
+  bottom: 0;
+  right: 0;
+  background: chartreuse;
+}
+
+.parts-container:hover .one, .two, .three, .four {
+  width: 0;
+  height: 0;
 }
 
 @media screen and (max-width: 768px){
