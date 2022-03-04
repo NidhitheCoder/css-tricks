@@ -100,3 +100,14 @@ const updateValue = () => {
 };
 
 button.addEventListener('click', updateValue);
+const content = document.getElementById('rin-container');
+
+document.addEventListener('load', () => {
+  const rings = [...document.querySelectorAll('.ring')];
+  rings.map(ring => {
+    console.log(ring);
+    ring.style.left = `${Math.random()}px`;
+    ring.style.top = `${Math.random()}px`;
+  })
+
+})

@@ -761,6 +761,13 @@ box-shadow: 0 0 10px 10px greenyellow;
   left: 50%;
 }
 
+.ring::after {
+  height: 1rem;
+  width: 1rem;
+  background: red;
+  box-shadow: 0 0 10px 10px red;
+}
+
 /* .ring-container:hover .ring{
   /* animation: jump 1s linear; 
   top: 40rem;
