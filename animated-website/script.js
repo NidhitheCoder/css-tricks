@@ -100,14 +100,15 @@ const updateValue = () => {
 };
 
 button.addEventListener('click', updateValue);
-const content = document.getElementById('rin-container');
+const content = document.getElementById('ring-container');
+// content.style.backgroundColor="orange";
 
-document.addEventListener('load', () => {
+content.addEventListener('focusin', () => {
+  console.log('heyyy');
   const rings = [...document.querySelectorAll('.ring')];
   rings.map(ring => {
-    console.log(ring);
-    ring.style.left = `${Math.random()}px`;
-    ring.style.top = `${Math.random()}px`;
+    ring.style.left = `${Math.ceil(Math.random()*10)}%`;
+    ring.style.top = `${Math.ceil(Math.random()*10)}%`;
   })
 
 })
