@@ -100,15 +100,22 @@ const updateValue = () => {
 };
 
 button.addEventListener('click', updateValue);
-const content = document.getElementById('ring-container');
-// content.style.backgroundColor="orange";
+const ringContainer = document.getElementById('ring-container');
 
-content.addEventListener('focusin', () => {
-  console.log('heyyy');
+for (let index = 0; index < 60; index++) {
+  const ring = document.createElement('div');
+  ring.classList.add('ring');
+  const randomClr = randomColor({ luminosity: "light" });
+  ring.style.borderColor = randomClr;
+  ring.style.boxShadow = `0 0 10px 10px ${randomClr}`;
+  ringContainer.appendChild(ring);
+}
+
+ringContainer.addEventListener('mousemove', () => {
   const rings = [...document.querySelectorAll('.ring')];
   rings.map(ring => {
-    ring.style.left = `${Math.ceil(Math.random()*10)}%`;
-    ring.style.top = `${Math.ceil(Math.random()*10)}%`;
+    ring.style.left = `${Math.random() * 100}vw`;
+    ring.style.top = `${Math.random() * 100}vh`;
   })
 
 })
