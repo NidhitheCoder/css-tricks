@@ -102,16 +102,15 @@ const updateValue = () => {
 button.addEventListener('click', updateValue);
 const ringContainer = document.getElementById('ring-container');
 
-for (let index = 0; index < 60; index++) {
+for (let index = 0; index < 200; index++) {
   const ring = document.createElement('div');
   ring.classList.add('ring');
   const randomClr = randomColor({ luminosity: "light" });
   ring.style.borderColor = randomClr;
-  ring.style.boxShadow = `0 0 10px 10px ${randomClr}`;
   ringContainer.appendChild(ring);
 }
 
-ringContainer.addEventListener('mousemove', () => {
+ringContainer.addEventListener('click', () => {
   const rings = [...document.querySelectorAll('.ring')];
   rings.map(ring => {
     ring.style.left = `${Math.random() * 100}vw`;
