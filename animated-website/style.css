@@ -874,6 +874,53 @@ box-shadow: 0 0 10px 10px greenyellow;
   place-items: center;
 }
 
+/* // anime section */
+.anime-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-value {
+  margin-top: 5rem;
+  padding: 4px 10px;
+  height: 10rem;
+  width: 20rem;
+  background-color: blueviolet;
+  color: white;
+  font-size: 3em;
+  transform: rotate(30deg);
+  transform-origin: left;
+}
+
+@keyframes swing {
+
+  0% {
+rotate: 30deg;
+  }
+  25% {
+    rotate: 60deg;
+  }
+  50% {
+    rotate: 30deg;
+  }
+  75% {
+    rotate: 60deg;
+  }
+  100% {
+    rotate: 30deg;
+  }
+  
+}
+
+#add-value:hover {
+  animation: swing 4s infinite;
+}
+
 @media screen and (max-width: 768px){
 
   /* Landing section */
