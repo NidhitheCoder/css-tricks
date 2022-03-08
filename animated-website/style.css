@@ -893,33 +893,61 @@ box-shadow: 0 0 10px 10px greenyellow;
   background-color: blueviolet;
   color: white;
   font-size: 3em;
-  transform: rotate(30deg);
   transform-origin: left;
+  animation: swing 8s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite;
+}
+
+.cube {
+  height: 15rem;
+  width: 15rem;
+  content: '';
+  border: 2px solid orange;
+  position: relative;
+}
+
+.cube::after {
+  height: 5rem;
+  width: 15rem;
+  content: '';
+  border: 2px solid turquoise;
+  bottom: -5rem;
+  right: -5rem;
+  position: absolute;
+}
+
+.cube::before {
+  content:  '';
+  height: 15rem;
+  width: 15rem;
+  border: 2px solid red;
+  top: -5rem;
+  left: -5rem;
+  position: absolute;
 }
 
 @keyframes swing {
 
   0% {
-rotate: 30deg;
+    rotate: 60deg;
   }
   25% {
-    rotate: 60deg;
+    rotate: 100deg;
   }
   50% {
-    rotate: 30deg;
-  }
-  75% {
     rotate: 60deg;
   }
+  75% {
+    rotate: 100deg;
+  }
   100% {
-    rotate: 30deg;
+    rotate: 60deg;
   }
   
 }
 
-#add-value:hover {
-  animation: swing 4s infinite;
-}
+/* #add-value:hover {
+  animation: swing 8s infinite;
+} */
 
 @media screen and (max-width: 768px){
 
