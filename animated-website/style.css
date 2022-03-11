@@ -1003,6 +1003,40 @@ box-shadow: 0 0 10px 10px greenyellow;
 	to { top: .9em; transform: rotate(-15deg); }
 }
 
+
+/*  Boxes section */
+
+.main-box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 30vw;
+  width: 30vw;
+  background-color: blue;
+}
+
+.box {
+  background-color: brown;
+  border: 2px solid blue;
+  height: 10vw;
+  width: 10vw;
+  display: grid;
+  place-items: center;
+  color: black;
+}
+
+.blue {
+  background-color: cornflowerblue;
+}
+
+.green {
+  background-color: palegreen;
+}
+
+.red {
+  background-color: orangered;
+}
 @media screen and (max-width: 768px){
 
   /* Landing section */
