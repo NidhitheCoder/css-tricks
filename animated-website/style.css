@@ -1042,6 +1042,37 @@ box-shadow: 0 0 10px 10px greenyellow;
   height: 10vw;
   width: 10vw;
 }
+
+#tileOne {
+background-image: url('../assets/image-tiles/image_part_002.jpg');
+}
+
+#tileTwo {
+  background-image: url('../assets/image-tiles/image_part_003.jpg');
+}
+
+#tileThree {
+  background-image: url('../assets/image-tiles/image_part_004.jpg');
+}
+#tileFour {
+  background-image: url('../assets/image-tiles/image_part_005.jpg');
+}
+
+#tileFive {
+  background-image: url('../assets/image-tiles/image_part_006.jpg');
+}
+
+#tileSix {
+  background-image: url('../assets/image-tiles/image_part_007.jpg');
+}
+#tileSeven {
+  background-image: url('../assets/image-tiles/image_part_008.jpg');
+}
+
+#tileEight {
+  background-image: url('../assets/image-tiles/image_part_009.jpg');
+}
+  
 @media screen and (max-width: 768px){
 
   /* Landing section */
