@@ -130,7 +130,7 @@
   </div>
 
   <div class="carousal-container" id="carousal-slider">
-    <div class="carousal-item">
+    <div class="carousal-item red">
       <div class="carousal-card">
         <h2 id="title"></h2>
         <div id="content"></div>
@@ -248,15 +248,33 @@
 
   <div class="container texts-container">
     <div class="main-box">
-      <div class="box blue">1</div>
-      <div class="box blue">2</div>
-      <div class="box blue">3</div>
-      <div class="box green">4</div>
-      <div class="box green">5</div>
-      <div class="box green">6</div>
-      <div class="box red">7</div>
-      <div class="box red">8</div>
-      <div class="box red">9</div>
+      <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)" >
+        <div draggable="true" class="item red"></div>
+      </div>
+      <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div draggable="true" class="item red"></div>
+      </div>
+      <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div draggable="true" class="item red"></div>
+      </div>
+      <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div draggable="true" class="item blue"></div>
+      </div>
+      <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div draggable="true" class="item blue"></div>
+      </div>
+      <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div draggable="true" class="item blue"></div>
+      </div>
+      <div  class="box">
+        <div draggable="true" class="item green"></div>
+      </div>
+      <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div draggable="true" class="item green"></div>
+      </div>
+      <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div draggable="true" class="item green"></div>
+      </div>
     </div>
   </div>
 </body>
