@@ -1041,36 +1041,37 @@ box-shadow: 0 0 10px 10px greenyellow;
 .item {
   height: 10vw;
   width: 10vw;
+  background-size: cover;
 }
 
 #tileOne {
-background-image: url('../assets/image-tiles/image_part_002.jpg');
+background-image: url('../assets/tiles-image/02.jpg');
 }
 
 #tileTwo {
-  background-image: url('../assets/image-tiles/image_part_003.jpg');
+  background-image: url('../assets/tiles-image/09.jpg');
 }
 
 #tileThree {
-  background-image: url('../assets/image-tiles/image_part_004.jpg');
+  background-image: url('../assets/tiles-image/06.jpg');
 }
 #tileFour {
-  background-image: url('../assets/image-tiles/image_part_005.jpg');
+  background-image: url('../assets/tiles-image/05.jpg');
 }
 
 #tileFive {
-  background-image: url('../assets/image-tiles/image_part_006.jpg');
+  background-image: url('../assets/tiles-image/08.jpg');
 }
 
 #tileSix {
-  background-image: url('../assets/image-tiles/image_part_007.jpg');
+  background-image: url('../assets/tiles-image/03.jpg');
 }
 #tileSeven {
-  background-image: url('../assets/image-tiles/image_part_008.jpg');
+  background-image: url('../assets/tiles-image/04.jpg');
 }
 
 #tileEight {
-  background-image: url('../assets/image-tiles/image_part_009.jpg');
+  background-image: url('../assets/tiles-image/07.jpg');
 }
   
 @media screen and (max-width: 768px){
