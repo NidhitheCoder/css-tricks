@@ -137,6 +137,17 @@ function drop(ev) {
     let lots = tiles.map(tile => tile.textContent);
     const stringValue = lots.reduce((acc, lot) => acc + lot);
     console.log(stringValue);
+    if( stringValue === '12345678') {
+      alert('Congrats your win ! ');
+      const boxes = [...document.querySelectorAll('.box')];
+      boxes.map((box, index) => {
+        if(index > 0) {
+          console.log(`tile${index}`, tiles[index]);
+          box.appendChild(tiles[index]);
+        }
+      });
+      boxes[0].innerHTML = '';
+    }
   } else {
     alert('Not allowed');
   }

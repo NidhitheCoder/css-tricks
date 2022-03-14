@@ -1044,33 +1044,33 @@ box-shadow: 0 0 10px 10px greenyellow;
   background-size: cover;
 }
 
-#tileOne {
+#tile1 {
 background-image: url('../assets/tiles-image/02.jpg');
 }
 
-#tileTwo {
+#tile2 {
   background-image: url('../assets/tiles-image/09.jpg');
 }
 
-#tileThree {
+#tile3 {
   background-image: url('../assets/tiles-image/06.jpg');
 }
-#tileFour {
+#tile4 {
   background-image: url('../assets/tiles-image/05.jpg');
 }
 
-#tileFive {
+#tile5 {
   background-image: url('../assets/tiles-image/08.jpg');
 }
 
-#tileSix {
+#tile6 {
   background-image: url('../assets/tiles-image/03.jpg');
 }
-#tileSeven {
+#tile7 {
   background-image: url('../assets/tiles-image/04.jpg');
 }
 
-#tileEight {
+#tile8 {
   background-image: url('../assets/tiles-image/07.jpg');
 }
   
