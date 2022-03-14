@@ -132,7 +132,11 @@ function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   if (!ev.target.innerText) {
-  ev.target.appendChild(document.getElementById(data));
+    ev.target.appendChild(document.getElementById(data));
+    const tiles = [...document.querySelectorAll('.tile')];
+    let lots = tiles.map(tile => tile.textContent);
+    const stringValue = lots.reduce((acc, lot) => acc + lot);
+    console.log(stringValue);
   } else {
     alert('Not allowed');
   }
