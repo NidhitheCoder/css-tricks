@@ -145,9 +145,6 @@ const fillImageTiles = () => {
     const elem = document.getElementById(`box${index}`);
     const tile = document.createElement('div');
     tile.id=`tile${item}`;
-    if(item !== 0) {
-      tile.textContent=item;
-    }
     tile.setAttribute('draggable', true);
     tile.addEventListener('dragstart',(e) => drag(e));
     tile.classList.add('tile');
@@ -156,21 +153,22 @@ const fillImageTiles = () => {
 }
 
 const checkWins = () => {
-  const tiles = [...document.querySelectorAll('.tile')];
-  let lots = tiles.map(tile => tile.textContent);
-  const stringValue = lots.reduce((acc, lot) => acc + lot);
-  console.log(stringValue);
-  if( stringValue === '163347852') {
-    alert('Congrats your win ! ');
-    fillImageTiles();
-  }
+  // const boxes = [...document.querySelectorAll('.box')];
+  // for (let index = 0; index < boxes.length; index++) {
+  //   let item = document.getElementById(`box${index}`);
+  //   console.log(item.getElementsByTagName('div')[0].title);
+    
+  // }
+  // // let lots = tiles.map(tile => tile.title);
+  // const stringValue = lots.reduce((acc, lot) => acc + lot);
+  // console.log(stringValue);
 };
 
-function drop(ev) {
+async function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   if (!ev.target.innerText) {
-    ev.target.appendChild(document.getElementById(data));
+    await ev.target.appendChild(document.getElementById(data));
     checkWins();
   } else {
     alert('Not allowed');
