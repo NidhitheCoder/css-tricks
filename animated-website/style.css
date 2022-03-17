@@ -1044,6 +1044,10 @@ box-shadow: 0 0 10px 10px greenyellow;
   background-size: cover;
 }
 
+.tile:hover {
+  border: 2px solid green;
+}
+
 #tile1 {
 background-image: url('../assets/tiles-image/02.jpg');
 }

@@ -144,6 +144,9 @@ const fillImageTiles = () => {
   shuffledItems.map((item, index) => {
     const elem = document.getElementById(`box${index}`);
     const tile = document.createElement('div');
+    if (item) {
+      tile.innerText = item;
+    }
     tile.id=`tile${item}`;
     tile.setAttribute('draggable', true);
     tile.addEventListener('dragstart',(e) => drag(e));
@@ -153,7 +156,10 @@ const fillImageTiles = () => {
 }
 
 const checkWins = () => {
-  // const boxes = [...document.querySelectorAll('.box')];
+  const boxes = [...document.querySelectorAll('.box')];
+  for (let index = 0; index < boxes.length; index++) {
+    console.log(boxes[index], boxes[index].getElementsByTagName('div')[0].id);
+  }
   // for (let index = 0; index < boxes.length; index++) {
   //   let item = document.getElementById(`box${index}`);
   //   console.log(item.getElementsByTagName('div')[0].title);
