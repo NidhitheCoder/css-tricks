@@ -1144,4 +1144,11 @@ background-image: url('../assets/tiles-image/02.jpg');
     bottom: 10%;
   }
 
+  .box-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: green;
+  }
+
 }
