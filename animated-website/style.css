@@ -1152,3 +1152,10 @@ background-image: url('../assets/tiles-image/02.jpg');
   }
 
 }
+
+.plot {
+  border-radius: 50%;
+  background: transparent;
+  border: 3px solid red;
+  height: 40vw;
+}

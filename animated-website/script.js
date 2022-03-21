@@ -158,7 +158,7 @@ const fillImageTiles = () => {
 const checkWins = () => {
   const boxes = [...document.querySelectorAll('.box')];
   for (let index = 0; index < boxes.length; index++) {
-    console.log(boxes[index], boxes[index].getElementsByTagName('div')[0].id);
+    console.log(boxes[index], boxes[index].getElementsByTagName('div')[0]?.id);
   }
   // for (let index = 0; index < boxes.length; index++) {
   //   let item = document.getElementById(`box${index}`);
