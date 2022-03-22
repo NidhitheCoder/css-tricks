@@ -145,7 +145,7 @@ const fillImageTiles = () => {
     const elem = document.getElementById(`box${index}`);
     const tile = document.createElement('div');
     if (item) {
-      tile.innerText = item;
+      tile.innerText = item + 1;
     }
     tile.id=`tile${item}`;
     tile.setAttribute('draggable', true);
@@ -158,7 +158,9 @@ const fillImageTiles = () => {
 const checkWins = () => {
   const boxes = [...document.querySelectorAll('.box')];
   for (let index = 0; index < boxes.length; index++) {
-    console.log(boxes[index], boxes[index].getElementsByTagName('div')[0]?.id);
+    const title = boxes[index].title;
+    const text = boxes[index]?.getElementsByTagName('div')[0]?.innerText | 1;
+    console.log(title, text);
   }
   // for (let index = 0; index < boxes.length; index++) {
   //   let item = document.getElementById(`box${index}`);

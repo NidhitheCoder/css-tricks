@@ -1053,29 +1053,29 @@ background-image: url('../assets/tiles-image/02.jpg');
 }
 
 #tile2 {
-  background-image: url('../assets/tiles-image/09.jpg');
+  background-image: url('../assets/tiles-image/03.jpg');
 }
 
 #tile3 {
-  background-image: url('../assets/tiles-image/06.jpg');
+  background-image: url('../assets/tiles-image/04.jpg');
 }
 #tile4 {
   background-image: url('../assets/tiles-image/05.jpg');
 }
 
 #tile5 {
-  background-image: url('../assets/tiles-image/08.jpg');
+  background-image: url('../assets/tiles-image/06.jpg');
 }
 
 #tile6 {
-  background-image: url('../assets/tiles-image/03.jpg');
+  background-image: url('../assets/tiles-image/07.jpg');
 }
 #tile7 {
-  background-image: url('../assets/tiles-image/04.jpg');
+  background-image: url('../assets/tiles-image/08.jpg');
 }
 
 #tile8 {
-  background-image: url('../assets/tiles-image/07.jpg');
+  background-image: url('../assets/tiles-image/09.jpg');
 }
   
 @media screen and (max-width: 768px){
