@@ -885,7 +885,7 @@ box-shadow: 0 0 10px 10px greenyellow;
   justify-content: center;
 }
 
-.cubes-container {
+.squares-container {
   display: flex;
   justify-content: space-around;
 }
@@ -902,7 +902,7 @@ box-shadow: 0 0 10px 10px greenyellow;
   animation: swing 8s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite;
 }
 
-.cube {
+.square {
   height: 15rem;
   width: 15rem;
   content: '';
@@ -915,14 +915,14 @@ box-shadow: 0 0 10px 10px greenyellow;
   align-items: center;
 }
 
-.cube:hover{
+.square:hover{
   scale: 1.5;
   transform: rotate(0deg);
   background-color: rgba(255, 165, 0, 0.3);
   margin-top: 20rem;
 }
 
-.cube::after {
+.square::after {
   height: 15rem;
   width: 15rem;
   content: '';
@@ -934,7 +934,7 @@ box-shadow: 0 0 10px 10px greenyellow;
   transform: rotateX(45deg); */
 }
 
-.cube::before {
+.square::before {
   content:  '';
   height: 15rem;
   width: 15rem;
@@ -1158,4 +1158,36 @@ background-image: url('../assets/tiles-image/02.jpg');
   background: transparent;
   border: 3px solid red;
   height: 40vw;
+}
+
+.cube-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.cube {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+}
+
+.cube div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+
+.cube div span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  background-color: #ff0;
 }
