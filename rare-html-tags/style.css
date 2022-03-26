@@ -1,0 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+mark {
+  background-color: purple;
+  font-size: large;
+  color: white;
+  padding: 0 10px;
+}
