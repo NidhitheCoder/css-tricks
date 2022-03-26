@@ -7,8 +7,8 @@ const init = function () {
     items[i].style.boxShadow = `0 0 10px 10px ${randomClr}`;
   }
   cssScrollSnapPolyfill();
+  fillImageTiles();
 };
-init();
 let intervalId;
 
 let sampleArr = [
@@ -61,9 +61,9 @@ function getData() {
     sliderItem.style.backgroundColor = `rgb(${red},${green},${blue})`;
     sliderItem.classList.add('mr-100');
     //  Change indication
-    indicators.map((indicator, index) => {
+    indicators.map((indicator, currentIndex) => {
       indicator.addEventListener('click', itemClick);
-      if (index === i) {
+      if (currentIndex === i) {
         indicator.style.backgroundColor = 'green';
       } else {
         indicator.style.backgroundColor = 'transparent';
@@ -100,3 +100,87 @@ const updateValue = () => {
 };
 
 button.addEventListener('click', updateValue);
+const ringContainer = document.getElementById('ring-container');
+
+for (let currentIndex = 0; currentIndex < 200; currentIndex++) {
+  const ring = document.createElement('div');
+  ring.classList.add('ring');
+  const randomClr = randomColor({ luminosity: "light" });
+  ring.style.borderColor = randomClr;
+  ringContainer.appendChild(ring);
+}
+
+ringContainer.addEventListener('click', () => {
+  const rings = [...document.querySelectorAll('.ring')];
+  rings.map(ring => {
+    ring.style.left = `${Math.random() * 100}vw`;
+    ring.style.top = `${Math.random() * 100}vh`;
+  })
+
+})
+
+//  drag and drop
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+const shuffleArray = () => {
+  let values = [1,2,3,4,5,6,7,8, 0];
+  let result =[];
+  while(values.length) {
+    let currentIndex = Math.floor(Math.random() * values.length);
+    result.push(values[currentIndex]);
+    values = values.filter((_, index) => currentIndex !== index);
+  }
+  return result;
+};
+
+const fillImageTiles = () => {
+  const shuffledItems = shuffleArray();
+  shuffledItems.map((item, index) => {
+    const elem = document.getElementById(`box${index}`);
+    const tile = document.createElement('div');
+    if (item) {
+      tile.innerText = item + 1;
+    }
+    tile.id=`tile${item}`;
+    tile.setAttribute('draggable', true);
+    tile.addEventListener('dragstart',(e) => drag(e));
+    tile.classList.add('tile');
+    elem.appendChild(tile);
+  });
+}
+
+const checkWins = () => {
+  const boxes = [...document.querySelectorAll('.box')];
+  for (let index = 0; index < boxes.length; index++) {
+    const title = boxes[index].title;
+    const text = boxes[index]?.getElementsByTagName('div')[0]?.innerText | 1;
+    console.log(title, text);
+  }
+  // for (let index = 0; index < boxes.length; index++) {
+  //   let item = document.getElementById(`box${index}`);
+  //   console.log(item.getElementsByTagName('div')[0].title);
+    
+  // }
+  // // let lots = tiles.map(tile => tile.title);
+  // const stringValue = lots.reduce((acc, lot) => acc + lot);
+  // console.log(stringValue);
+};
+
+async function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  if (!ev.target.innerText) {
+    await ev.target.appendChild(document.getElementById(data));
+    checkWins();
+  } else {
+    alert('Not allowed');
+  }
+}
+
+init();

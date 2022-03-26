@@ -130,7 +130,7 @@
   </div>
 
   <div class="carousal-container" id="carousal-slider">
-    <div class="carousal-item">
+    <div class="carousal-item red">
       <div class="carousal-card">
         <h2 id="title"></h2>
         <div id="content"></div>
@@ -203,16 +203,23 @@
       <img src="./assets/img3.jpeg" alt="" class="images">
     </div>
   </div>
-  <div class="container ring-container">
-    <div class="ring"></div>
-    <div class="ring"></div>
-    <div class="ring"></div>
-    <div class="ring"></div>
-    <div class="ring"></div>
-    <div class="ring"></div>
+  <div class="container ring-container" id="ring-container">
+    <h1>Welcome</h1>
+    <h3>Clicke anyware to move bubbles</h3>
   </div>
-  <div class="container">
-    <p>hello</p>
+  <div class="container anime-container">
+    <div class="squares-container">
+      <div class="square">One</div>
+      <div class="square">Two</div>
+      <div class="square">Three</div>
+      <div class="square">Four</div>
+      <div class="square">Five</div>
+      <div class="square">Six</div>
+      <div class="square">Seven</div>
+      <div class="square">Eight</div>
+      <div class="square">Nine</div>
+      <div class="square">Ten</div>
+    </div>
     <div id="result"></div>
     <button id="add-value">Add Data</button>
   </div>
@@ -232,6 +239,46 @@
     <div class="parts four">
       <img src="assets/cup.png" alt="">
     </div>
+  </div>
+
+  <div class="container texts-container">
+    <p class="forward">Hello</p>
+    <p class="backward">welcome</p>
+  </div>
+
+  <div class="container texts-container">
+    <div class="main-box">
+      <div class="box" title='1' id="box0" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="box" title='2' id="box1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="box" title='3' id="box2" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="box" title='4' id="box3" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="box" title='5' id="box4" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="box" title='6' id="box5" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="box" title='7' id="box6" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="box" title='8' id="box7" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="box" title='9' id="box8" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+    </div>
+  </div>
+  <div class="container cube-container">
+   <div class="cube">
+     <div class="top"></div>
+     <div>
+       <span style='--i:0'></span>
+       <span style='--i:1'></span>
+       <span style='--i:2'></span>
+       <span style='--i:3'></span>
+
+     </div>
+   </div>
   </div>
 </body>
 <script src='script.js'></script>
