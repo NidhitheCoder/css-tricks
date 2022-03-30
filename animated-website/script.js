@@ -129,7 +129,7 @@ function drag(ev) {
 }
 
 const shuffleArray = () => {
-  let values = [1,2,3,4,5,6,7,8, 0];
+  let values = [1,2,3,4,5,6,7,8,0];
   let result =[];
   while(values.length) {
     let currentIndex = Math.floor(Math.random() * values.length);
@@ -160,7 +160,7 @@ const checkWins = () => {
   for (let index = 0; index < boxes.length; index++) {
     const title = boxes[index].title;
     const text = boxes[index]?.getElementsByTagName('div')[0]?.innerText | 1;
-    console.log(title, text);
+    console.log(boxes[0], text);
   }
   // for (let index = 0; index < boxes.length; index++) {
   //   let item = document.getElementById(`box${index}`);

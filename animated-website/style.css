@@ -6,6 +6,8 @@
    --primary-color: rgb(201, 209, 217);
    --gray-shadow: rgba(27, 31, 35, 0.04);
    --secondary-color: rgba(170, 46, 207, 0.2);
+   --pink-color:  #ff0087;
+   --green-color: #01ff5f;
  }
  
  * {
@@ -1233,5 +1235,87 @@ background-image: url('../assets/tiles-image/02.jpg');
   0 0 300px rgba(0, 255, 0, 0.6),
   0 0 400px rgba(0, 255, 0, 0.8),
   0 0 500px rgba(0, 255, 0, 1);
+
+}
+
+.face-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  gap: 4px;
+  overflow: hidden;
+}
+
+label {
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+
+label input {
+  appearance: none;
+}
+
+label .face {
+  position: absolute;
+  inset: 0;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  mix-blend-mode: lighten;
+  transition: 0.5s;
+}
+
+label input:checked ~ .face {
+  background: var(--pink-color);
+  z-index: 1000;
+  filter: drop-shadow(0 0 50px var(--pink-color))
+  drop-shadow(0 0 100px var(--pink-color))
+  drop-shadow(0 0 150px var(--pink-color));
+}
+
+label:nth-child(even) input:checked ~ .face {
+  background: var(--green-color);
+  z-index: 1000;
+  filter: drop-shadow(0 0 50px var(--green-color))
+  drop-shadow(0 0 100px var(--green-color))
+  drop-shadow(0 0 150px var(--green-color));
+}
+label .face::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 45px;
+  height: 15px;
+  width: 15px;
+  background: #111;
+  opacity: 0.5;
+  border-radius: 50%;
+box-shadow: 40px 0 0 #111;
+}
+
+label .face::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  bottom: 45px;
+  height: 8px;
+  width: 40px;
+  background: #111;
+  opacity: 0.5;
+  transition: 0.5;
+}
+
+label input:checked ~ .face::after{
+width: 40px;
+height: 20px;
+border-radius: 8px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+transform: translateX(-50%) translateY(10px);
 
 }
