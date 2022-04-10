@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  background: #ccc;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+div {
+  margin: 2rem 0;
+}
+
+/* global styling leads to secure responsive layouts and it is easy to maintain */
+.container {
+  background-color: orange;
+  padding: 2rem;
+  width: 90%;
+}
+
+p {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: maroon;
+}
+
+/*  avoid fixed sizes  */
+
+.boxes {
+  width: 20%;
+  display: flex;
+  justify-content:center;
+  background: cornflowerblue;
+  padding: 2rem;
+}
