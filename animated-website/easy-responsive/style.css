@@ -29,12 +29,41 @@ p {
   color: maroon;
 }
 
+h1 {
+  color: springgreen;
+  font-size: clamp(3rem, 1rem + 10vw, 7rem);
+}
+
+header {
+  /* height: 300px; */
+  min-height: 200px;
+  padding: 0.5rem;
+  background: blueviolet;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 2rem;
+}
 /*  avoid fixed sizes  */
 
 .boxes {
-  width: 20%;
+  /* width: 20%; */
+  max-width: 60rem;
   display: flex;
   justify-content:center;
   background: cornflowerblue;
   padding: 2rem;
+}
+
+.split {
+    display: flex;
+    gap: 1rem;
+    background: chocolate;
+}
+
+@media (max-width: 40em) {
+  .split {
+    background: chartreuse;
+  }
+  
 }
