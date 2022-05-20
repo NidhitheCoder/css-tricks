@@ -7,3 +7,20 @@
 .table {
   display: table;
 }
+
+.bottle {
+  position: relative;
+}
+
+.parts {
+  background-color: grey;
+  border-radius: 50%;
+  height: 5vh;
+  width: 5vw;
+}
+
+.box {
+  height: 10vh;
+  width: 5vw;
+  background: orange;
+}
