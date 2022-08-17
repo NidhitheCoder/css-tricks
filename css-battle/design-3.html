@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-color: #222;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .square-1 {
+      width: 100px;
+      height: 100px;
+      background-color: #f2994a;
+      position: absolute;
+      left: 40vw;
+      top: 45vh;
+    }
+
+    .square-2 {
+      width: 100px;
+      height: 100px;
+      background-color: #2d9cdb;
+      left: 40vw;
+      top: 40vh;
+      position: absolute;
+    }
+
+    .black-square {
+      background-color: #222;
+      height: 75px;
+      width: 75px;
+    }
+
+    .black-square-2 {
+      background-color: #222;
+      height: 75px;
+      width: 75px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  </style>
+  <body>
+    <div class="square-1">
+      <div class="black-square"></div>
+    </div>
+    <div class="square-2">
+      <div class="black-square-2"></div>
+    </div>
+  </body>
+</html>

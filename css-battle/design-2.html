@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      background-color: #f3ac3c;
+      display: grid;
+      place-items: center;
+    }
+
+    .leaf {
+      background-color: #254241;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    .leaf:nth-child(1) {
+      border-bottom-right-radius: 0px;
+    }
+    .leaf:nth-child(2) {
+      border-bottom-left-radius: 0px;
+    }
+    .leaf:nth-child(3) {
+      border-top-right-radius: 0px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      transform: rotate(-45deg);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+    </div>
+  </body>
+</html>
