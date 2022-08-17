@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      background-color: #191919;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .container {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .round {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      border: 5px solid #5DBCF9;
+      position: absolute;
+    }
+
+    .round:nth-child(1) {
+      top: 0;
+      left: 0;
+    }
+    .round:nth-child(2) {
+      top: 0;
+      right: 0;
+    }
+
+    .round:nth-child(3) {
+      bottom: 0;
+      left: 0;
+    }
+
+    .round:nth-child(4) {
+      bottom: 0;
+      right: 0;
+    }
+
+    .square {
+      height: 100px;
+      width: 100px;
+      border: 5px solid #5DBCF9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="round"></div>
+  <div class="round"></div>
+  <div class="round"></div>
+  <div class="round"></div>
+  <div class="square"></div>
+</div>
+</body>
+</html>
