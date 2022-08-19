@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      background-color: #191919;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .container {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .round {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      border: 15px solid #5DBCF9;
+      position: absolute;
+    }
+
+    .round:nth-child(1) {
+      top: 0;
+      left: 0;
+      border-bottom-right-radius: 15px;
+    }
+    .round:nth-child(2) {
+      top: 0;
+      right: 0;
+      border-bottom-left-radius: 15px;
+    }
+
+    .round:nth-child(3) {
+      bottom: 0;
+      left: 0;
+      border-top-right-radius: 15px;
+    }
+
+    .round:nth-child(4) {
+      bottom: 0;
+      right: 0;
+      border-top-left-radius: 15px;
+    }
+
+    .square {
+      height: 130px;
+      width: 130px;
+      border: 15px solid #5DBCF9;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="round"></div>
+  <div class="round"></div>
+  <div class="round"></div>
+  <div class="round"></div>
+  <div class="square"></div>
+</div>
+</body>
+</html>
