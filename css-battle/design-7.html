@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      height: 100vh;
-      width: 100vw;
-      background-color: #222;
-      display: grid;
-      place-items: center;
-      position: relative;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: #d25b70;
+        display: grid;
+        place-items: center;
+        position: relative;
+      }
 
-  </style>
-</head>
-<body>
-  
-</body>
+      .leaf {
+        background-color: #f2e09f;
+        border-radius: 12px;
+        width: 15vw;
+        height: 2vh;
+        position: absolute;
+      }
+
+      .leaf:nth-child(1) {
+        top: 50vh;
+        left: 25vw;
+      }
+      .leaf:nth-child(2) {
+        top: 40vh;
+        left: 26vw;
+        transform: rotate(30deg);
+      }
+      .leaf:nth-child(3) {
+        top: 30vh;
+        left: 29vw;
+        transform: rotate(60deg);
+      }
+      .leaf:nth-child(4) {
+        top: 26vh;
+        left: 36vw;
+        transform: rotate(90deg);
+      }
+      .leaf:nth-child(5) {
+        top: 30vh;
+        left: 43vw;
+        transform: rotate(120deg);
+      }
+      .leaf:nth-child(6) {
+        top: 38vh;
+        left: 49vw;
+        transform: rotate(150deg);
+      }
+      .leaf:nth-child(7) {
+        top: 50vh;
+        left: 50vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+  </body>
 </html>
