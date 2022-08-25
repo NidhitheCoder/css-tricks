@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: #4f77ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .circle {
+        background-color: #191919;
+        height: 50vh;
+        width: 50vh;
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .small-circle {
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+        width: 5vw;
+        height: 5vw;
+        background-color: #f9e492;
+        border-radius: 50%;
+      }
+
+      .left-line {
+        position: absolute;
+        left: 0;
+        width: 50%;
+        height: 1rem;
+        background-color: #f9e492;
+      }
+
+      .left-line:nth-child(2) {
+        bottom: 4rem;
+      }
+
+      .left-line:nth-child(3) {
+        bottom: 6rem;
+      }
+
+      .left-line:nth-child(4) {
+        bottom: 8rem;
+      }
+
+      .curved {
+        background-color: rebeccapurple;
+        width: 2rem;
+        height: 1rem;
+        position: absolute;
+        left: 50%;
+        transform: skewY(320deg);
+        transform-origin: left;
+      }
+
+      .curved:nth-child(5) {
+        bottom: 4rem;
+      }
+
+      .curved:nth-child(6) {
+        bottom: 6rem;
+      }
+
+      .curved:nth-child(7) {
+        bottom: 8rem;
+      }
+
+      .right-line {
+        position: absolute;
+        right: 0;
+        width: calc(50% - 2rem);
+        height: 1rem;
+        background-color: #f9e492;
+      }
+
+      .right-line:nth-child(8) {
+        bottom: 5.66rem;
+      }
+
+      .right-line:nth-child(9) {
+        bottom: 7.66rem;
+      }
+
+      .right-line:nth-child(10) {
+        bottom: 9.66rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle">
+        <div class="small-circle"></div>
+        <div class="left-line"></div>
+        <div class="left-line"></div>
+        <div class="left-line"></div>
+        <div class="curved"></div>
+        <div class="curved"></div>
+        <div class="curved"></div>
+        <div class="right-line"></div>
+        <div class="right-line"></div>
+        <div class="right-line"></div>
+      </div>
+    </div>
+  </body>
+</html>

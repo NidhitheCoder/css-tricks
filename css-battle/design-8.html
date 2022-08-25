@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     height: 100vh;
+     width: 100vw;
+     background-color: #191919;
+    }
+
+    .circle {
+      background-color: #F9E492;
+      width: 30vw;
+      height: 30vw;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 5;
+      overflow: hidden;
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border: 51vh;
+      border-top: 0;
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: #4F77FF;
+      position: absolute;
+      bottom: 0;
+   left: 25vw;
+   
+    }
+
+    .small-triangle {
+      width: 0;
+      height: 0;
+      border: 31vh;
+      border-top: 0;
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: #191919;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-0vw);
+    }
+  </style>
+</head>
+<body>
+  <div class="circle">
+    <div class="small-triangle"></div>
+  </div>
+  <div class="triangle">
+  </div>
+</body>
+</html>
