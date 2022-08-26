@@ -62,13 +62,29 @@
         height: 5rem;
         width: 5rem;
         background-color: #781728;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+
+      .circle-yellow {
+        background-color: #F6DF96;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
       }
     </style>
   </head>
   <body>
     <div class="container-circle">
       <div class="primary-circle">
-        <div class="inner-red"></div>
+        <div class="inner-red">          <div class="circle-yellow"></div>
+        </div>
       </div>
       <div class="top-half"></div>
       <div class="bottom-half"></div>
