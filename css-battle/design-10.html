@@ -21,6 +21,11 @@
       }
 
       .container-circle {
+        width: 43vh;
+        height: 43vh;
+        display: grid;
+        place-items: center;
+        position: relative;
       }
 
       .primary-circle {
@@ -28,7 +33,7 @@
         height: 40vh;
         background-color: #781728;
         border-radius: 50%;
-        position: relative;
+        display: grid;
       }
 
       .top-half {
@@ -38,8 +43,8 @@
         top: 0;
         left: 0;
         background-color: #d25b70;
-        border-top-left-radius: 20rem;
-        border-top-right-radius: 20rem;
+        border-top-left-radius: 22rem;
+        border-top-right-radius: 22rem;
       }
 
       .bottom-half {
@@ -49,13 +54,22 @@
         bottom: 0;
         left: 0;
         background-color: #ffffff;
-        border-bottom-left-radius: 20rem;
-        border-bottom-right-radius: 20rem;
+        border-bottom-left-radius: 22rem;
+        border-bottom-right-radius: 22rem;
+      }
+
+      .inner-red {
+        height: 5rem;
+        width: 5rem;
+        background-color: #781728;
       }
     </style>
   </head>
   <body>
-    <div class="primary-circle">
+    <div class="container-circle">
+      <div class="primary-circle">
+        <div class="inner-red"></div>
+      </div>
       <div class="top-half"></div>
       <div class="bottom-half"></div>
     </div>
