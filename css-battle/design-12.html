@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @keyframes myAnimation{
+  0%{
+    opacity: 1;
+    transform: translateY(0vw);
+  }
+  50%{
+    display: none;
+    opacity: 0;
+    transform: translateY(-100vw);
+  }
+  100%{
+    display: none;
+    opacity: 1;
+    transform: translateY(0vw);
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color:  #191919;
+  color: dodgerblue;
+  position: relative;
+}
+
+.wave{
+    animation-name: myAnimation;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+    height: 100vh;
+    width: 100vw;
+    background-color: yellow;
+    animation-iteration-count: infinite;
+    display: grid;
+    place-items: center;
+    color: dodgerblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div class="wave">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem eum porro sequi commodi voluptate illo soluta enim placeat voluptatem, assumenda error. Quibusdam odio ea suscipit blanditiis soluta nemo natus quae!</p>
+  </div>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem eum porro sequi commodi voluptate illo soluta enim placeat voluptatem, assumenda error. Quibusdam odio ea suscipit blanditiis soluta nemo natus quae!</p>
+</body>
+</html>
