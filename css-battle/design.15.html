@@ -20,7 +20,71 @@
         width: 100vw;
         background-color: #191919;
       }
+
+      .box {
+        border-bottom: 4rem solid rebeccapurple;
+        border-right: 4rem solid rebeccapurple;
+        transform: rotate(320deg);
+        position: relative;
+      }
+
+      .line {
+        height: 10vh;
+        width: 0.4rem;
+        background-color: orange;
+      }
+
+      .line:nth-child(2) {
+        background-color: green;
+      }
+
+      .line:nth-child(3) {
+        background-color: crimson;
+      }
+      .line:nth-child(4) {
+        background-color: crimson;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .line:nth-child(5) {
+        background-color: orange;
+        position: absolute;
+        top: 50%;
+        right: 0;
+      }
+      .line:nth-child(6) {
+        background-color: green;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <div class="box">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="box">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="box">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </body>
 </html>
