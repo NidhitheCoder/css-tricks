@@ -73,6 +73,53 @@
       .rotate-y:hover {
         rotate: y 60deg;
       }
+
+      .back-face {
+        background: linear-gradient(#f3695a, #f3695a, #f3695a, #293462);
+        height: 20vh;
+        width: 10vw;
+        padding: 1rem;
+        transition: all 800ms ease-in-out;
+        backface-visibility: visible;
+      }
+
+      .back-face:hover {
+        rotate: y 180deg;
+      }
+
+      .small-circle {
+        height: 3rem;
+        width: 3rem;
+        background-color: #243d83;
+        border-radius: round;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+
+      .side-view {
+        background-color: #62306d;
+        height: 20vh;
+        width: 20vh;
+        transition: all 500ms ease-in-out;
+        padding: 2rem;
+      }
+
+      .side-view:hover {
+        rotate: 1 1 1 90deg;
+      }
+
+      .scale-3d {
+        background: linear-gradient(#f3695a, #293462);
+        height: 20vh;
+        width: 20vh;
+        transition: all 500ms ease-in-out;
+        padding: 2rem;
+      }
+
+      .scale-3d:hover {
+        scale: 1.5 0.5;
+      }
     </style>
   </head>
   <body>
@@ -84,6 +131,17 @@
 
     <div class="rotate-y">
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="back-face">
+      <div class="small-circle">Choose</div>
+    </div>
+
+    <div class="side-view">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, enim!
+    </div>
+
+    <div class="scale-3d">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, deleniti?
     </div>
   </body>
 </html>
