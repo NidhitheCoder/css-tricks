@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: #191919;
+      }
+
+      .box {
+        /* border-bottom: 4rem solid rebeccapurple;
+        border-right: 4rem solid rebeccapurple; */
+        transform: rotate(320deg);
+        position: relative;
+        height: 16rem;
+        width: 4rem;
+      }
+
+      .line {
+        height: 10vh;
+        width: 0.4rem;
+        background-color: orange;
+      }
+
+      .line:hover {
+        transform: translate(-10rem);
+      }
+
+      .line:nth-child(2) {
+        background-color: green;
+      }
+
+      .line:nth-child(3) {
+        background-color: crimson;
+      }
+      .line:nth-child(4) {
+        background-color: crimson;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .line:nth-child(5) {
+        background-color: orange;
+        position: absolute;
+        top: 35%;
+        right: 0;
+      }
+      .line:nth-child(6) {
+        background-color: green;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="box">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="box">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </body>
+</html>
