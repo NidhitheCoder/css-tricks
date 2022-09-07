@@ -15,9 +15,10 @@
       body {
         min-height: 100vh;
         background-color: #14313e;
-        width: 100%;
+        width: 100vw;
         padding: 10rem;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
         gap: 5rem;
         perspective: 1000px;
         color: whitesmoke;
@@ -120,6 +121,43 @@
       .scale-3d:hover {
         scale: 1.5 0.5;
       }
+
+      .profile-card {
+        height: 20vh;
+        background-color: yellow;
+        width: 10vw;
+        padding: 2rem;
+        transition: all 500ms ease;
+        rotate: x 70deg;
+        position: relative;
+        z-index: 1;
+      }
+
+      .profile-card::after {
+        content: "";
+        border: 1px solid red;
+        position: absolute;
+        inset: 0;
+        transform: translateY(-100px);
+      }
+
+      .profile-card::before {
+        content: "";
+        background-color: #f3ac3c;
+        position: absolute;
+        inset: 0;
+        transform: translateY(100px);
+        z-index: 0;
+      }
+
+      .profile-card:hover {
+        rotate: x 0deg;
+      }
+
+      .profile-card:hover .profile-card::after,
+      .profile-card:hover .profile-card::after {
+        transform: translateY(0);
+      }
     </style>
   </head>
   <body>
@@ -142,6 +180,12 @@
 
     <div class="scale-3d">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, deleniti?
+    </div>
+
+    <div class="profile-card">
+      <h2>John Doe</h2>
+      <h4>21 Years old</h4>
+      <p>Lconsectetur adipisicing elit.</p>
     </div>
   </body>
 </html>
