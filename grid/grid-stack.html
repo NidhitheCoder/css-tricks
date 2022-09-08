@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .stack {
+      display: grid;
+      place-items: center;
+      /* grid-template-rows: repeat(3, 1fr); */
+      /* isolation: isolate; */
+    }
+
+    .stack > * {
+      grid-column: 1/ -1;
+      grid-row: 1/ -1;
+    }
+
+    body img {
+      height: 60vh;
+      width: 60vw;
+    }
+
+    .media {
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="stack">
+    <h1>Stacked content easy way</h1>
+    <img class='media'  src='../assets/bg1.jpeg' alt='"stack sample'>
+  </div>
+</body>
+</html>
