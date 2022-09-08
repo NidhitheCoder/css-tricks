@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        background-color: #14313e;
+        width: 100vw;
+        padding: 10rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 5rem;
+        perspective: 1000px;
+        color: whitesmoke;
+        font-weight: 600;
+        font-family: sans-serif;
+      }
+      .card {
+        background-color: #ba3e46;
+        height: 20vh;
+        width: 10vw;
+        border-radius: 12px;
+        transition: transform 500ms ease;
+        rotate: 30deg;
+      }
+
+      .card:hover {
+        transform: scale(1.7) rotate(50deg);
+      }
+
+      .circle {
+        background-color: #f3ac3c;
+        height: 20vh;
+        width: 10vw;
+        border-radius: 50%;
+        padding: 4rem;
+        transition: all 500ms ease;
+      }
+
+      .circle:hover {
+        rotate: y 70deg;
+      }
+
+      .rotate-x {
+        background: linear-gradient(#f3695a, #293462);
+        height: 20vh;
+        width: 10vw;
+        padding: 1rem;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .rotate-x:hover {
+        rotate: x 50deg;
+      }
+
+      .rotate-y {
+        background: linear-gradient(#f3ac3c, #a3a368, #a3a368);
+        height: 20vh;
+        width: 10vw;
+        padding: 1rem;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .rotate-y:hover {
+        rotate: y 60deg;
+      }
+
+      .back-face {
+        background: linear-gradient(#f3695a, #f3695a, #f3695a, #293462);
+        height: 20vh;
+        width: 10vw;
+        padding: 1rem;
+        transition: all 800ms ease-in-out;
+        backface-visibility: visible;
+      }
+
+      .back-face:hover {
+        rotate: y 180deg;
+      }
+
+      .small-circle {
+        height: 3rem;
+        width: 3rem;
+        background-color: #243d83;
+        border-radius: round;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+
+      .side-view {
+        background-color: #62306d;
+        height: 20vh;
+        width: 20vh;
+        transition: all 500ms ease-in-out;
+        padding: 2rem;
+      }
+
+      .side-view:hover {
+        rotate: 1 1 1 90deg;
+      }
+
+      .scale-3d {
+        background: linear-gradient(#f3695a, #293462);
+        height: 20vh;
+        width: 20vh;
+        transition: all 500ms ease-in-out;
+        padding: 2rem;
+      }
+
+      .scale-3d:hover {
+        scale: 1.5 0.5;
+      }
+
+      .profile-card {
+        height: 20vh;
+        background-color: rgba(0, 255, 0, 0.1);
+        width: 10vw;
+        padding: 2rem;
+        transition: all 500ms ease;
+        rotate: x 70deg;
+        position: relative;
+        z-index: 3;
+      }
+
+      .profile-card::after {
+        content: "Some creative things";
+        border: 0.4rem solid green;
+        position: absolute;
+        inset: 0;
+        height: 25vh;
+        transform: translateY(-100px);
+        transition: all 500ms ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        padding: 1rem;
+        color: transparent;
+      }
+
+      .profile-card::before {
+        content: "";
+        box-shadow: 5px 10px 30px green;
+        background-color: green;
+        position: absolute;
+        inset: 0;
+        transform: translateY(100px);
+        z-index: -1;
+        transition: all 500ms ease;
+      }
+
+      .profile-card:hover {
+        rotate: x 0deg;
+      }
+
+      .profile-card:hover:after,
+      .profile-card:hover:before {
+        transform: translateY(0px);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card"></div>
+    <div class="circle">some text</div>
+    <div class="rotate-x">
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="rotate-y">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="back-face">
+      <div class="small-circle">Choose</div>
+    </div>
+
+    <div class="side-view">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, enim!
+    </div>
+
+    <div class="scale-3d">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, deleniti?
+    </div>
+
+    <div class="profile-card">
+      <h2>John Doe</h2>
+      <h4>21 Years old</h4>
+    </div>
+  </body>
+</html>
