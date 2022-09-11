@@ -20,9 +20,43 @@
       align-items: center;
 
      }
+
+     .container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 100px 100px;
+      grid-area:  "red red green red"
+      "green green red red";
+      /* background-color: chocolate; */
+     }
+
+     .item {
+      height: 5rem;
+      border: 1px solid blue;
+     }
+
+     .item:nth-child(1) {
+      background-color: red;
+      grid-area: red;
+     }
+
+     .item:nth-child(3) {
+      background-color: green;
+      grid-area: green;
+     }
   </style>
 </head>
 <body>
 
-<div class="contianer"></div></body>
+<div class="container">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div></body>
 </html>
