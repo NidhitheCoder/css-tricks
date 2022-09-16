@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100vw;
+        padding: 20rem 3rem;
+        background-color: hsl(200 50% 5%);
+      }
+
+      section {
+        display: grid;
+        grid-template-columns: repeat(3 1fr);
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h1>This div has a title</h1>
+      </div>
+      <div>
+        <p>This div has a regular paragraph</p>
+      </div>
+      <div>
+        <p></p>
+      </div>
+      <div>
+        <p class="fancy-paragraph">This div has paragraph with style fancy</p>
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor, sit amet <a href="#">consectetur</a> adipisicing
+          elit. Sunt soluta fugit nemo maiores expedita?
+        </p>
+      </div>
+      <div>
+        <p>This div has a regular paragraph</p>
+      </div>
+    </section>
+  </body>
+</html>
