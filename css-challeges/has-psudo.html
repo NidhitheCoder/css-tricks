@@ -14,18 +14,58 @@
 
       body {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
         width: 100vw;
         padding: 20rem 3rem;
         background-color: hsl(200 50% 5%);
+        color: white;
       }
 
       section {
         display: grid;
-        grid-template-columns: repeat(3 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+        margin: 1rem;
+      }
+
+      section > div {
+        background-color: hsl(200 20% 95%);
+        padding: 1rem;
+        color: rebeccapurple;
+      }
+
+      div:has(h1) {
+        background-color: hotpink;
+      }
+      div:has(p) {
+        background-color: green;
+      }
+
+      div:has(p:empty) {
+        background-color: transparent;
+      }
+
+      div:has(.fancy-paragraph) {
+        color: orangered;
+        background-color: white;
+      }
+
+      div:has(a) {
+        background-color: teal;
+      }
+
+      div:has(> a) {
+        background-color: yellow;
+      }
+
+      .card:has(.media) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: gray;
       }
     </style>
   </head>
@@ -51,6 +91,36 @@
       </div>
       <div>
         <p>This div has a regular paragraph</p>
+      </div>
+      <div>
+        <a href='"#'>This div has a a tag</a>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
+          eos accusamus iusto.
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod rem
+          totam veniam!
+        </p>
+      </div>
+      <div><p>hello</p></div>
+      <div><a href="#" /></div>
+      <div class="card media">
+        <p>media</p>
+        <h1>1</h1>
+      </div>
+      <div class="card media">
+        <p>media</p>
+        <h1>2</h1>
+      </div>
+      <div class="card media">
+        <p>media</p>
+        <h1>3</h1>
       </div>
     </section>
   </body>
