@@ -19,16 +19,42 @@
       min-height: 100vh;
       width: 100vw;
       background-color: rgb(19, 32, 26);
-      color: white;
+      font-family: sans-serif;
     }
 
     h1 {
-      background-color: linear-gradient(red, green);
+      background-image: linear-gradient(to right, red, green);
       color: transparent;
+      background-clip: text;
+      /* -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+      font-size: xx-large;
+      position: relative;
+      -webkit-text-stroke: 0.3vw orange;
+    }
+
+    h1::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: attr(data-text);
+      width: 8%;
+      -webkit-text-stroke: 0vw green;
+      animation: animate 6s linear infinite;
+
+    }
+
+    @keyframes animate {
+      0% {
+        width: 0;
+      }
+      50% {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Animate content with gradient</h1>
+  <h1 data-text='Animate content with gradient'>Animate content with gradient</h1>
 </body>
 </html>
