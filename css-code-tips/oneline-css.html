@@ -62,10 +62,40 @@
         transform: scaleY(-1);
       }
       img:nth-child(3) {
-        transform: scaleZ(-1)
+        transform: scaleZ(-1);
       }
       img:nth-child(4) {
-        transform: scale3d(-1)
+        transform: scale3d(-1);
+      }
+
+      .box {
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+        width: 200px;
+        background-color: rebeccapurple;
+        overflow-x: scroll;
+        /* scroll-snap-type : x mandatory; */
+        scroll-snap-type: x proximity;
+      }
+
+      .item {
+        height: 200px;
+        min-width: 200px;
+        background-color: red;
+        scroll-snap-align: center;
+      }
+
+      .item:nth-child(2) {
+        background-color: gray;
+      }
+
+      .item:nth-child(3) {
+        background-color: yellow;
+      }
+
+      .item:nth-child(4) {
+        background-color: skyblue;
       }
     </style>
   </head>
@@ -100,11 +130,18 @@
       </div>
     </div>
     <div class="wrapper">
-      <img src="https://picsum.photos/200">
-      <img src="https://picsum.photos/200">
-      <img src="https://picsum.photos/200">
-      <img src="https://picsum.photos/200">
-      <img src="https://picsum.photos/200">
+      <img src="https://picsum.photos/200" />
+      <img src="https://picsum.photos/200" />
+      <img src="https://picsum.photos/200" />
+      <img src="https://picsum.photos/200" />
+      <img src="https://picsum.photos/200" />
+    </div>
+
+    <div class="box">
+      <div class="item">lorem 1</div>
+      <div class="item">lorem 2</div>
+      <div class="item">lorem 3</div>
+      <div class="item">lorem 4</div>
     </div>
   </body>
 </html>
