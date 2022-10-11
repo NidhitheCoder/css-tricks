@@ -21,10 +21,16 @@
         width: 100vw;
       }
 
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+      }
+
       .container {
         display: flex;
         flex-direction: row;
-        width: 80vw;
+        /* width: 80vw; */
       }
 
       .beauty {
@@ -49,16 +55,34 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <h2 class="beauty">Standard</h2>
-      <div class='text-container'>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-        voluptatum nulla autem, earum saepe nihil quis necessitatibus omnis,
-        nobis labore, cum aspernatur. Odio, laboriosam delectus? Obcaecati rerum
-        incidunt quia nihil?
-      </p>
-    </div>
+    <div class="wrapper">
+      <div class="container">
+        <h2 class="beauty">Standard</h2>
+        <div class="text-container">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            voluptatum nulla autem.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="beauty">Standard</h2>
+        <div class="text-container">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            voluptatum nulla autem.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="beauty">Standard</h2>
+        <div class="text-container">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            voluptatum nulla autem.
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
