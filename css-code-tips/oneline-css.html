@@ -1,27 +1,64 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>One line css</title>
-  <style>
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One line css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      width: 100vw;
-    }
-  </style>
-</head>
-<body>
-  <div class='container'></div>
-</body>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100vw;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+      }
+
+      .beauty {
+        color: royalblue;
+        background-color: orangered;
+        padding: 1rem;
+        writing-mode: sideways-lr;
+        /* writing-mode: sideways-rl; */
+      }
+
+      .text-container {
+        /* height: 100%; */
+        font-size: large;
+        font-weight: 500;
+        color: orangered;
+        background-color: rgb(225, 231, 247);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="beauty">Standard</h2>
+      <div class='text-container'>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+        voluptatum nulla autem, earum saepe nihil quis necessitatibus omnis,
+        nobis labore, cum aspernatur. Odio, laboriosam delectus? Obcaecati rerum
+        incidunt quia nihil?
+      </p>
+    </div>
+    </div>
+  </body>
 </html>
