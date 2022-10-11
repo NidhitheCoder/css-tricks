@@ -122,6 +122,13 @@
         overflow: hidden;
         -webkit-box-orient: vertical;
       }
+
+      .linear-bg {
+        background: linear-gradient(to right, red, green, blue);
+        background-clip: text;
+        /* -webkit-text-fill-color: transparent; */
+        color: transparent;
+      }
     </style>
   </head>
   <body>
@@ -174,5 +181,7 @@
     <div class="clamp-line">
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, omnis iste velit provident eveniet, facilis, illum quas esse facere enim impedit. Iste nobis libero placeat ducimus corrupti voluptatum fuga et!</p>
     </div>
+
+    <h1 class='linear-bg'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, voluptas.</h1>
   </body>
 </html>
