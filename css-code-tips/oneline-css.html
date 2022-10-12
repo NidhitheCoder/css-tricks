@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One line css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100vw;
+        padding: 2rem;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        /* width: 80vw; */
+      }
+
+      .beauty {
+        color: royalblue;
+        background-color: orangered;
+        padding: 1rem;
+        writing-mode: sideways-lr;
+        /* writing-mode: sideways-rl; */
+      }
+
+      .text-container {
+        /* height: 100%; */
+        font-size: large;
+        font-weight: 500;
+        color: orangered;
+        background-color: rgb(225, 231, 247);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      img:nth-child(1) {
+        transform: scaleX(-1);
+      }
+      img:nth-child(2) {
+        transform: scaleY(-1);
+      }
+      img:nth-child(3) {
+        transform: scaleZ(-1);
+      }
+      img:nth-child(4) {
+        transform: scale3d(-1);
+      }
+
+      .box {
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+        width: 200px;
+        background-color: rebeccapurple;
+        overflow-x: scroll;
+        /* scroll-snap-type : x mandatory; */
+        scroll-snap-type: x proximity;
+      }
+
+      .item {
+        height: 200px;
+        min-width: 200px;
+        background-color: red;
+        scroll-snap-align: center;
+      }
+
+      .item:nth-child(2) {
+        background-color: gray;
+      }
+
+      .item:nth-child(3) {
+        background-color: yellow;
+      }
+
+      .item:nth-child(4) {
+        background-color: skyblue;
+      }
+
+      .sizing {
+        overflow: auto;
+        /* resize: both; */
+        /* resize: vertical; */
+        /* resize: horizontal; */
+        background-color: cyan;
+        padding: 3rem;
+      }
+
+      .clamp-line {
+        padding: 2rem;
+        overflow: auto;
+        background-color: magenta;
+      }
+
+      .clamp-line p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        max-width: 10rem;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+      }
+
+      .linear-bg {
+        background: linear-gradient(to right, red, green, blue);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        /* pointer-events: none;
+        opacity: 0; */
+        /* display: none; */
+        animation: fade 1s ease-in 1s;
+        pointer-events: none;
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .img-container {
+        background-color: darkolivegreen;
+        width: 25rem;
+        height: 40rem;
+      }
+
+      .img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h2 class="beauty">Standard</h2>
+        <div class="text-container">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            voluptatum nulla autem.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="beauty">Standard</h2>
+        <div class="text-container">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            voluptatum nulla autem.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="beauty">Standard</h2>
+        <div class="text-container">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            voluptatum nulla autem.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <img src="https://picsum.photos/200" />
+      <img src="https://picsum.photos/200" />
+      <img src="https://picsum.photos/200" />
+      <img src="https://picsum.photos/200" />
+      <img src="https://picsum.photos/200" />
+    </div>
+
+    <div class="box">
+      <div class="item">lorem 1</div>
+      <div class="item">lorem 2</div>
+      <div class="item">lorem 3</div>
+      <div class="item">lorem 4</div>
+    </div>
+
+    <div class="sizing">hello</div>
+
+    <div class="clamp-line">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, omnis
+        iste velit provident eveniet, facilis, illum quas esse facere enim
+        impedit. Iste nobis libero placeat ducimus corrupti voluptatum fuga et!
+      </p>
+    </div>
+
+    <h1 class="linear-bg">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis,
+      voluptas.
+    </h1>
+    <div class="img-container">
+      <img src="https://picsum.photos/1200" />
+    </div>
+  </body>
+</html>
