@@ -114,7 +114,7 @@
         background-color: magenta;
       }
 
-      .clamp-line p{
+      .clamp-line p {
         display: -webkit-box;
         -webkit-line-clamp: 3;
         line-clamp: 3;
@@ -126,9 +126,36 @@
       .linear-bg {
         background: linear-gradient(to right, red, green, blue);
         background-clip: text;
-        /* -webkit-text-fill-color: transparent; */
+        -webkit-text-fill-color: transparent;
         color: transparent;
+        /* pointer-events: none;
+        opacity: 0; */
+        /* display: none; */
+        animation: fade 1s ease-in 1s;
+        pointer-events: none;
       }
+
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .img-container {
+        background-color: darkolivegreen;
+        width: 25rem;
+        height: 40rem;
+      }
+
+      .img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
     </style>
   </head>
   <body>
@@ -179,9 +206,19 @@
     <div class="sizing">hello</div>
 
     <div class="clamp-line">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, omnis iste velit provident eveniet, facilis, illum quas esse facere enim impedit. Iste nobis libero placeat ducimus corrupti voluptatum fuga et!</p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, omnis
+        iste velit provident eveniet, facilis, illum quas esse facere enim
+        impedit. Iste nobis libero placeat ducimus corrupti voluptatum fuga et!
+      </p>
     </div>
 
-    <h1 class='linear-bg'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, voluptas.</h1>
+    <h1 class="linear-bg">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis,
+      voluptas.
+    </h1>
+    <div class="img-container">
+      <img src="https://picsum.photos/1200" />
+    </div>
   </body>
 </html>
