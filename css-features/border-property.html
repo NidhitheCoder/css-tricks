@@ -1,34 +1,52 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Document</title>
-  <style>
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      width: 100vw;
-    }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100vw;
+      }
 
-    .box {
-      border: 2px solid red;
-      border-image: round;
-    }
-  </style>
-</head>
-<body>
-  <div class='container'>
-    <div class="box"></div>
-  </div>
-</body>
+      .box {
+        height: 20rem;
+        width: 20rem;
+        /* background-color: cyan; */
+        border: 20px solid;
+        border-image-source: url('../assets/bg1.jpeg');
+        border-image-slice: 20;
+        /* border-image-slice: 20 fill; */
+        /* border-image-slice: 20 200 10 30; */
+        /* border-image-slice: 20 200 10 30 fill; */
+        padding: 2rem;
+        /* border-image-repeat: round; */
+        color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h2>Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, iusto
+          repellendus soluta atque eveniet nemo! Non ex itaque veritatis dolor
+          perferendis nemo accusamus nam, deleniti similique magnam officiis
+          laudantium illum.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
