@@ -24,6 +24,7 @@
         gap: 2rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
       }
 
       /* border image properties */
@@ -44,14 +45,28 @@
 
       /* gradient border */
       .content {
+        width: 20rem;
         /* border-block-start: 10px solid;
         padding-block-start: 10px; */
         border: 10px solid;
         padding: 10px;
         border-image-source: linear-gradient(90deg, red, blue, green);
-        /* border-image-slice: 1; */
-        border-image-slice: 1 fill;
+        border-image-slice: 1;
+        /* border-image-slice: 1 fill; */
         /* border-image-slice: 20 fill; */
+      }
+
+      .content-linear {
+        padding: 1rem;
+        width: 20rem;
+        height: 20rem;
+        background-color: lightblue;
+        /* linear border */
+        border-block-start: 10px solid;
+        /* border: 10px solid; */
+        padding-block-start: 10px;
+        border-image-source: linear-gradient(90deg, red 50%,blue 50%);
+        border-image-slice: 1;
       }
     </style>
   </head>
@@ -68,9 +83,20 @@
       </div>
 
       <div class="content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eum, iste ad similique consectetur debitis.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eum, iste
+        ad similique consectetur debitis.
       </div>
-      
+
+      <div class="content-linear">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsum
+          harum ullam, consequuntur veritatis aspernatur sapiente! Earum eveniet
+          voluptates excepturi? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Excepturi fugiat deserunt saepe pariatur perferendis
+          culpa cumque at dolores! Fugit exercitationem commodi blanditiis
+          repellendus deserunt error explicabo architecto porro odit voluptatem?
+        </p>
+      </div>
     </div>
   </body>
 </html>
