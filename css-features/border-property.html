@@ -65,7 +65,22 @@
         border-block-start: 10px solid;
         /* border: 10px solid; */
         padding-block-start: 10px;
-        border-image-source: linear-gradient(90deg, red 50%,blue 50%);
+        border-image-source: linear-gradient(90deg, red 50%, blue 50%);
+        border-image-slice: 1;
+      }
+
+      .side-border-gradient {
+        padding: 1rem;
+        width: 20rem;
+        height: 20rem;
+        border-block-start: 10px solid;
+        border-inline-start: 10px solid;
+        border-image-source: radial-gradient(
+          circle at top left,
+          orange,
+          green,
+          transparent 50%
+        );
         border-image-slice: 1;
       }
     </style>
@@ -96,6 +111,13 @@
           culpa cumque at dolores! Fugit exercitationem commodi blanditiis
           repellendus deserunt error explicabo architecto porro odit voluptatem?
         </p>
+      </div>
+
+      <div class="side-border-gradient">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
+        iure sint. Provident ipsam, reprehenderit consequuntur eum voluptas non
+        autem voluptate dolor necessitatibus fugiat accusantium vitae? Nihil,
+        soluta tempora! Unde.
       </div>
     </div>
   </body>
