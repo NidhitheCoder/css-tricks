@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100vw;
+      }
+
+      .container {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* border image properties */
+      .box {
+        height: 20rem;
+        width: 20rem;
+        /* background-color: cyan; */
+        border: 20px solid;
+        border-image-source: url("../assets/bg1.jpeg");
+        border-image-slice: 20;
+        /* border-image-slice: 20 fill; */
+        /* border-image-slice: 20 200 10 30; */
+        /* border-image-slice: 20 200 10 30 fill; */
+        padding: 2rem;
+        /* border-image-repeat: round; */
+        color: orangered;
+      }
+
+      /* gradient border */
+      .content {
+        width: 20rem;
+        /* border-block-start: 10px solid;
+        padding-block-start: 10px; */
+        border: 10px solid;
+        padding: 10px;
+        border-image-source: linear-gradient(90deg, red, blue, green);
+        border-image-slice: 1;
+        /* border-image-slice: 1 fill; */
+        /* border-image-slice: 20 fill; */
+      }
+
+      .content-linear {
+        padding: 1rem;
+        width: 20rem;
+        height: 20rem;
+        background-color: lightblue;
+        /* linear border */
+        border-block-start: 10px solid;
+        /* border: 10px solid; */
+        padding-block-start: 10px;
+        border-image-source: linear-gradient(90deg, red 50%, blue 50%);
+        border-image-slice: 1;
+      }
+
+      .side-border-gradient {
+        padding: 1rem;
+        width: 20rem;
+        height: 20rem;
+        border-block-start: 10px solid;
+        border-inline-start: 10px solid;
+        border-image-source: radial-gradient(
+          circle at top left,
+          orange,
+          green,
+          transparent 50%
+        );
+        border-image-slice: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h2>Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, iusto
+          repellendus soluta atque eveniet nemo! Non ex itaque veritatis dolor
+          perferendis nemo accusamus nam, deleniti similique magnam officiis
+          laudantium illum.
+        </p>
+      </div>
+
+      <div class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eum, iste
+        ad similique consectetur debitis.
+      </div>
+
+      <div class="content-linear">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsum
+          harum ullam, consequuntur veritatis aspernatur sapiente! Earum eveniet
+          voluptates excepturi? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Excepturi fugiat deserunt saepe pariatur perferendis
+          culpa cumque at dolores! Fugit exercitationem commodi blanditiis
+          repellendus deserunt error explicabo architecto porro odit voluptatem?
+        </p>
+      </div>
+
+      <div class="side-border-gradient">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
+        iure sint. Provident ipsam, reprehenderit consequuntur eum voluptas non
+        autem voluptate dolor necessitatibus fugiat accusantium vitae? Nihil,
+        soluta tempora! Unde.
+      </div>
+    </div>
+  </body>
+</html>
