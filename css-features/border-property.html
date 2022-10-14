@@ -20,12 +20,19 @@
         width: 100vw;
       }
 
+      .container {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* border image properties */
       .box {
         height: 20rem;
         width: 20rem;
         /* background-color: cyan; */
         border: 20px solid;
-        border-image-source: url('../assets/bg1.jpeg');
+        border-image-source: url("../assets/bg1.jpeg");
         border-image-slice: 20;
         /* border-image-slice: 20 fill; */
         /* border-image-slice: 20 200 10 30; */
@@ -33,6 +40,18 @@
         padding: 2rem;
         /* border-image-repeat: round; */
         color: orangered;
+      }
+
+      /* gradient border */
+      .content {
+        /* border-block-start: 10px solid;
+        padding-block-start: 10px; */
+        border: 10px solid;
+        padding: 10px;
+        border-image-source: linear-gradient(90deg, red, blue, green);
+        /* border-image-slice: 1; */
+        border-image-slice: 1 fill;
+        /* border-image-slice: 20 fill; */
       }
     </style>
   </head>
@@ -47,6 +66,11 @@
           laudantium illum.
         </p>
       </div>
+
+      <div class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eum, iste ad similique consectetur debitis.
+      </div>
+      
     </div>
   </body>
 </html>
