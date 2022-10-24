@@ -4,7 +4,7 @@
   <meta charset='UTF-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Document</title>
+  <title>State of css</title>
   <style>
     *{
       margin: 0;
@@ -13,11 +13,18 @@
     }
 
     body {
-      display: flex;
+      /* display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      width: 100vw;
+      width: 100vw; */
+      display: grid;
+      grid-template-columns: [fullbleed-start] auto [main-start] min(90%, 60ch) [main-end] auto [fullbleed-end];
+    }
+
+    body > * {
+      display: grid;
+      grid-template-columns: subgrid;
     }
   </style>
 </head>
