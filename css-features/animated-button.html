@@ -22,7 +22,7 @@
         width: 100vw;
       }
 
-      form {
+      .form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -35,15 +35,18 @@
         gap: 1rem;
       }
 
-      form input {
+      .form input {
         border-radius: 8px;
         border: none;
         outline: none;
         height: 2rem;
         width: 100%;
+        padding-left: 1rem;
+        color: crimson;
+        font-weight: 700;
       }
 
-      form button[type="submit"] {
+      #submit-button {
         margin-top: 1rem;
         padding: 0.5rem 2rem;
         color: royalblue;
@@ -53,30 +56,53 @@
         width: 100%;
       }
 
+      .form input[type="password"] {
+        color: orangered;
+      }
+
       .success {
         background-color: green;
+        color: white;
+        outline: none;
+        font-size: large;
       }
     </style>
   </head>
   <body>
-    <form action="">
+    <div class="form">
       <label for="name">Name:</label>
-      <input type="text" id="name" />
+      <input
+        type="text"
+        id="name"
+        onchange="validateForm()"
+        autocomplete="off"
+      />
       <label for="password">Password:</label>
-      <input type="password" />
-      <button type="submit" id="submit-button" onclick="{submitForm}">
+      <input
+        type="password"
+        onchange="validateForm()"
+        id="password"
+        autocomplete="off"
+      />
+      <button type="button" onclick="submitForm()" id="submit-button">
         Submit
       </button>
-    </form>
+    </div>
   </body>
-  <script>
-    const submitForm = () => {
-      const name = document.getElementById("name").textContent;
-
+  <script type="text/javascript">
+    function validateForm() {
       const submit = document.getElementById("submit-button");
-      if (name) {
-        submit.addClass("success");
+
+      const name = document.getElementById("name").value;
+      const password = document.getElementById("password").value;
+
+      if (name !== "" && password !== "") {
+        submit.classList.add("success");
+      } else {
+        submit.classList.remove("success");
       }
-    };
+    }
+
+    function submitForm() {}
   </script>
 </html>
