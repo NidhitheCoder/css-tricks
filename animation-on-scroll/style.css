@@ -37,12 +37,17 @@ body {
 h1 {
   margin: 30px;
   text-shadow: 2px 2px 10px #000;
+  transform: rotate(10deg);
+}
+
+h1:hover {
+  transform: rotate(0);
 }
 
 .box {
   background-color: var(--clr);
   height: 200px;
-  width: 400px;
+  width: 100vw;
   display: grid;
   place-items: center;
   margin: 10px;
