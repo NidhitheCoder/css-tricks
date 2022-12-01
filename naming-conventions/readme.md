@@ -19,3 +19,10 @@
 - In the case of constants we can use `uppercase` for naming, because they are non-changing variables.
 - when naming a constant variable and the name contain more than one word, you should use `snake uppercase`.
 - You can user `pascal-case`  for naming a class and components in javascript.
+- We must use `camel case` for naming a method in javascript and use verbs as prefixes to make names more meaningful.
+- In javascript an underscore is used to denote private variables or functions.
+- For global javascript variables , there are no specific naming standards.
+- It is best to use `camel-case` for `mutable` global variables and `uppercase` for `immutable` global variables.
+
+
+reference: https://www.syncfusion.com/blogs/post/10-javascript-naming-conventions-every-developer-should-know.aspx
