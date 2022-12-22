@@ -5,3 +5,4 @@ CSS Matrix
 - The matrix function integrates all the transform functions into one that is rotate, scale, translate and skew.
 - Syntax
   `matrix(scaleX, skewY, skewX, scaleY, tx, ty)`
+- The order of values in both matrix functions are not in sequences.
