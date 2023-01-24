@@ -1,0 +1,16 @@
+{
+  "name": "post-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss style.css --dir dest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0"
+  }
+}
