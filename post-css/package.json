@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "postcss style.css --dir dest"
+    "build:css": "postcss style.css --dir dest",
+    "watch:css": "postcss style.css --dir dest -w"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,8 @@
   "dependencies": {
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0"
+  },
+  "devDependencies": {
+    "cssnano": "^5.1.14"
   }
 }

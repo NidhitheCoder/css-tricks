@@ -14,3 +14,6 @@ How to install post css and postcss CLI
   `  "scripts": {
     "build:css": "postcss style.css --dir dest"
   },`
+
+How to build ?
+- npm run build:css
