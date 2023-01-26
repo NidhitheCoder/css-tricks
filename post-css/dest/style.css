@@ -1,13 +1,1 @@
-body p {
-  color: orange;
-}
-
-body div {
-  color: blue;
-}
-
-body {
-  display: grid;
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHAge1xuICBjb2xvcjogb3JhbmdlO1xufVxuXG5ib2R5IGRpdiB7XG4gIGNvbG9yOiBibHVlO1xufVxuXG5ib2R5IHtcbiAgZGlzcGxheTogZ3JpZDtcbn1cbiJdfQ== */
+body p{color:orange}body div{color:blue}body{display:grid}
