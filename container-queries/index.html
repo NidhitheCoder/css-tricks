@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Container queries</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+      }
+      div {
+        padding: 1rem;
+      }
+      p {
+        padding: 2rem 0.5rem;
+      }
+
+      .narrow {
+        width: 20vw;
+      }
+
+      .medium {
+        width: 50vw;
+      }
+
+      .wide {
+        width: 80vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+        consequatur, perspiciatis repudiandae totam qui laboriosam facilis eum a
+        magnam odit atque fugit. Sunt incidunt ipsum sapiente laboriosam autem,
+        expedita illo?
+      </p>
+    </div>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+        consequatur, perspiciatis repudiandae totam qui laboriosam facilis eum a
+        magnam odit atque fugit. Sunt incidunt ipsum sapiente laboriosam autem,
+        expedita illo?
+      </p>
+    </div>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+        consequatur,
+      </p>
+    </div>
+  </body>
+</html>
