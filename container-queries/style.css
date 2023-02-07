@@ -92,6 +92,7 @@ img {
 }
 
 .super-simple-example > .container {
+  /* container-type: inline-size; */
   margin-inline: auto;
   width: 100%;
   padding: 2rem;
@@ -116,16 +117,27 @@ img {
   color: var(--clr-neutral-900);
 }
 
-@media (min-width: 375px) {
+@container (min-width: 375px) {
   .super-simple-example p {
     background: lime;
   }
 }
 
-@media (min-width: 625px) {
+@container (min-width: 625px) {
   .super-simple-example p {
     background: orangered;
   }
+}
+
+.call-to-action {
+  display: grid;
+  gap: 1rem;
+  background-image: var(--gradient-2);
+  padding: 1rem;
+}
+
+.call-to-action > * {
+  margin: 0;
 }
 
 /* div {
