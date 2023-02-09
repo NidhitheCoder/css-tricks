@@ -92,7 +92,7 @@ img {
 }
 
 .super-simple-example > .container {
-  /* container-type: inline-size; */
+  container-type: inline-size;
   margin-inline: auto;
   width: 100%;
   padding: 2rem;
@@ -117,13 +117,13 @@ img {
   color: var(--clr-neutral-900);
 }
 
-@container (min-width: 375px) {
+@container (min-width: 275px) {
   .super-simple-example p {
     background: lime;
   }
 }
 
-@container (min-width: 625px) {
+@container (min-width: 575px) {
   .super-simple-example p {
     background: orangered;
   }
