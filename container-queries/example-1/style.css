@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.6;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+main,
+section {
+  padding-block: 3rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  width: min(100% - 4rem, 70rem);
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 50rem) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1;
+  }
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-400);
+  padding: 1em 3em;
+  font-weight: 800;
+  border-radius: 100vw;
+}
+
+.hero {
+  background-color: var(--clr-neutral-900);
+  background-image: var(--gradient-1);
+  background-blend-mode: multiply;
+  padding: 5rem 0;
+  min-height: 80vh;
+}
+
+.hero-title {
+  color: var(--clr-neutral-300);
+  font-size: clamp(2.875rem, 5vw + 0.5rem, 5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 0.25em;
+}
+
+.hero-img {
+  box-shadow: 3px 3px 25px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text {
+  line-height: 1.7;
+  margin: 0 0 1.5em;
+}
+
+.super-simple-example {
+  padding-block: 20vh;
+  display: grid;
+  gap: 3rem;
+}
+
+.super-simple-example > .container {
+  container-type: inline-size;
+  margin-inline: auto;
+  width: 100%;
+  padding: 2rem;
+  border: 5px solid hsl(0 0% 95% /0.2);
+}
+
+.contianer[data-type="narrow"] {
+  max-width: 350px;
+}
+
+.contianer[data-type="medium"] {
+  max-width: 600px;
+}
+
+.contianer[data-type="wide"] {
+  max-width: 850px;
+}
+
+.super-simple-example p {
+  padding: 0.5em;
+  background: var(--clr-primary-300);
+  color: var(--clr-neutral-900);
+}
+
+@container (min-width: 275px) {
+  .super-simple-example p {
+    background: lime;
+  }
+}
+
+@container (min-width: 575px) {
+  .super-simple-example p {
+    background: orangered;
+  }
+}
+
+.call-to-action {
+  display: grid;
+  gap: 1rem;
+  background-image: var(--gradient-2);
+  padding: 1rem;
+}
+
+.call-to-action > * {
+  margin: 0;
+}
+
+/* div {
+  padding: 1rem;
+}
+
+p {
+  padding: 2rem 0.5rem;
+} */
+
+/* .narrow {
+  width: 20vw;
+}
+
+.medium {
+  width: 50vw;
+}
+
+.wide {
+  width: 80vw;
+} */

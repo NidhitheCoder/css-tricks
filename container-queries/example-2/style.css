@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: lightgoldenrodyellow;
+}
+
+.wrapper {
+  margin: auto;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+.wrapper > .box {
+    container-type: inline-size;
+}
+
+.small-box {
+  width: 10vw;
+  background-color: aqua;
+  padding: 2rem;
+}
+
+.middle-box {
+  width: 30vw;
+  padding: 2rem;
+  background-color: brown;
+}
+
+.large-box {
+  width: 75vw;
+  padding: 2rem;
+  background-color: darksalmon;
+}
+
+
+@container (min-width: 375px) {
+   .container>div {
+    background: red
+   }
+    
+}
