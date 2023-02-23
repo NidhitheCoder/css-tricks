@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 100vh;
+    position: relative;
+}
+
+.bottom {
+    position: absolute;
+    inset:  auto 0 0;
+    bottom: 0;
+    padding: 0.5rem;
+    background-color: firebrick;
+}
+
+.main {
+    padding: 1.5rem;
+}
+
+.bottom-content {
+    /* Giving viewport units for fontsize is a  bad practice */
+    /* If you want give a specific viewport unit as fontsize unit then use with clamp */
+    /* font-size: 7vw;  */
+    font-size: clamp(3rem, 5vw + 1rem, 6rem);
+    background-color: orange;
+}
+
+.box {
+    width: 50lvw;
+    height: 20svh;
+    background-color: orangered;
+}
