@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>concept 1</title>
     <style>
+      body {
+        display: flex;
+      }
+
       .box {
         background: rebeccapurple;
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
       }
 
       /* @media (min-width: 300px) {
@@ -30,18 +35,39 @@
         }
       } */
 
-      @media (width >= 300px) {
+      .main {
+        flex-grow: 1;
+      }
+
+      .sidebar {
+        width: 30%;
+        border-left: 1px solid black;
+      }
+
+      .main,
+      .sidebar {
+        contianer-type: inline-size;
+      }
+
+      @container (width >= 300px) {
+        .box {
+          background-color: red;
+        }
+      }
+
+      /* @media (width >= 300px) {
         .box {
           background-color: orange;
         }
-      }
+      } */
     </style>
   </head>
   <body>
-    <div class="box"></div>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nemo
-    maiores culpa adipisci dolore quibusdam nostrum dolor distinctio doloribus
-    sint eum ipsa omnis vitae consequatur, reprehenderit molestias labore
-    impedit voluptas.
+    <div class="main">
+      <div class="box"></div>
+    </div>
+    <div class="sidebar">
+      <div class="box"></div>
+    </div>
   </body>
 </html>
