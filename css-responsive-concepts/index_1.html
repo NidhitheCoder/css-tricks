@@ -35,7 +35,7 @@
         }
       } */
 
-      .main {
+      /* .main {
         flex-grow: 1;
       }
 
@@ -53,13 +53,26 @@
         .box {
           background-color: red;
         }
-      }
+      } */
 
       /* @media (width >= 300px) {
         .box {
           background-color: orange;
         }
       } */
+
+      /* no browser support */
+      @custom-media --small (width >= 400px);
+
+      @media (--small) {
+        .box {
+          background: red;
+        }
+
+        .mobile-only {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -69,5 +82,8 @@
     <div class="sidebar">
       <div class="box"></div>
     </div>
+    <!-- create desktop and mobile separate html for reduce complexity -->
+    <div class="desktop-only"></div>
+    <div class="mobile-only"></div>
   </body>
 </html>
