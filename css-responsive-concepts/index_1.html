@@ -7,13 +7,14 @@
     <style>
       body {
         display: flex;
+        margin: 0;
       }
 
       .box {
         background: rebeccapurple;
-        width: 100px;
-        height: 100px;
-        margin: 20px;
+        /* width: 100px; */
+        /* height: 100px; */
+        /* margin: 20px; */
       }
 
       /* @media (min-width: 300px) {
@@ -61,7 +62,7 @@
         }
       } */
 
-      /* no browser support */
+      /* no browser support
       @custom-media --small (width >= 400px);
 
       @media (--small) {
@@ -72,18 +73,45 @@
         .mobile-only {
           display: none;
         }
+      } */
+
+      .grid {
+        padding: 1rem;
+        width: 100%;
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); auto-fit add full space to the child's */
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(100px, 1fr)
+        ); /*auto-fill only takes the given spaces for child's */
+        gap: 1rem;
+        grid-auto-rows: 200px; /* automatically adjust height of the child's */
       }
     </style>
   </head>
   <body>
-    <div class="main">
+    <!-- <div class="main">
       <div class="box"></div>
     </div>
     <div class="sidebar">
       <div class="box"></div>
     </div>
-    <!-- create desktop and mobile separate html for reduce complexity -->
+    create desktop and mobile separate html for reduce complexity
     <div class="desktop-only"></div>
-    <div class="mobile-only"></div>
+    <div class="mobile-only"></div> -->
+
+    <div class="grid">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
   </body>
 </html>
