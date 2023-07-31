@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>concept 1</title>
+    <style>
+      body {
+        display: flex;
+        margin: 0;
+        font-size: clamp(0.75rem, 3.5vw, 10rem);
+      }
+
+      /* .box {
+        background: rebeccapurple;
+        /* width: 100px; */
+      /* height: 100px; */
+      /* margin: 20px; 
+      } */
+
+      /* @media (min-width: 300px) {
+        .box {
+          background: red;
+        }
+      } */
+
+      /* @media (orientation: portrait) {
+        .box {
+          background: red;
+        }
+      } */
+
+      /* Media query using min-aspect-ratio */
+      /* @media (min-aspect-ratio: 16/ 9) {
+        .box {
+          background: red;
+        }
+      } */
+
+      /* .main {
+        flex-grow: 1;
+      }
+
+      .sidebar {
+        width: 30%;
+        border-left: 1px solid black;
+      }
+
+      .main,
+      .sidebar {
+        contianer-type: inline-size;
+      }
+
+      @container (width >= 300px) {
+        .box {
+          background-color: red;
+        }
+      } */
+
+      /* @media (width >= 300px) {
+        .box {
+          background-color: orange;
+        }
+      } */
+
+      /* no browser support
+      @custom-media --small (width >= 400px);
+
+      @media (--small) {
+        .box {
+          background: red;
+        }
+
+        .mobile-only {
+          display: none;
+        }
+      } */
+
+      .box {
+        background-color: rebeccapurple;
+        height: 200px;
+        /* min-width: 100px;
+        width: 75%;
+        max-width: 200px; */
+        width: clamp(300px, 75%, 500px);
+      }
+
+      .grid {
+        padding: 1rem;
+        width: 100%;
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); auto-fit add full space to the child's */
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(100px, 1fr)
+        ); /*auto-fill only takes the given spaces for child's */
+        gap: 1rem;
+        grid-auto-rows: 200px; /* automatically adjust height of the child's */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="main">
+      <div class="box"></div>
+    </div>
+    <div class="sidebar">
+      <div class="box"></div>
+    </div>
+    create desktop and mobile separate html for reduce complexity
+    <div class="desktop-only"></div>
+    <div class="mobile-only"></div> -->
+
+    <!-- <div class="grid">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div> -->
+
+    <!-- /clamp -->
+    <div class="box"></div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae
+    itaque cum consequatur quas accusantium dolore? Natus nulla ex, dolores vel
+    nostrum laboriosam, facilis magnam voluptatibus voluptas dolore culpa quia
+    nam perspiciatis eos quasi ipsum eveniet a suscipit consectetur explicabo
+    facere inventore tenetur excepturi! Voluptates ipsum fugit unde quod
+    blanditiis iste eos, expedita nemo. Minima rem debitis veniam, hic, iste
+    optio molestiae non veritatis, ex alias aut sequi distinctio maxime. Aliquid
+    sed aperiam modi maiores, minus dolorum soluta explicabo nam, harum cumque,
+    ea architecto molestias qui officia illo! Suscipit aperiam inventore qui
+    vero velit aut molestias hic temporibus exercitationem optio?
+  </body>
+</html>
