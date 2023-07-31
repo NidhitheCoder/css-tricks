@@ -8,14 +8,15 @@
       body {
         display: flex;
         margin: 0;
+        font-size: clamp(0.75rem, 3.5vw, 10rem);
       }
 
-      .box {
+      /* .box {
         background: rebeccapurple;
         /* width: 100px; */
-        /* height: 100px; */
-        /* margin: 20px; */
-      }
+      /* height: 100px; */
+      /* margin: 20px; 
+      } */
 
       /* @media (min-width: 300px) {
         .box {
@@ -75,6 +76,15 @@
         }
       } */
 
+      .box {
+        background-color: rebeccapurple;
+        height: 200px;
+        /* min-width: 100px;
+        width: 75%;
+        max-width: 200px; */
+        width: clamp(300px, 75%, 500px);
+      }
+
       .grid {
         padding: 1rem;
         width: 100%;
@@ -101,7 +111,7 @@
     <div class="desktop-only"></div>
     <div class="mobile-only"></div> -->
 
-    <div class="grid">
+    <!-- <div class="grid">
       <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
@@ -112,6 +122,19 @@
       <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
-    </div>
+    </div> -->
+
+    <!-- /clamp -->
+    <div class="box"></div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae
+    itaque cum consequatur quas accusantium dolore? Natus nulla ex, dolores vel
+    nostrum laboriosam, facilis magnam voluptatibus voluptas dolore culpa quia
+    nam perspiciatis eos quasi ipsum eveniet a suscipit consectetur explicabo
+    facere inventore tenetur excepturi! Voluptates ipsum fugit unde quod
+    blanditiis iste eos, expedita nemo. Minima rem debitis veniam, hic, iste
+    optio molestiae non veritatis, ex alias aut sequi distinctio maxime. Aliquid
+    sed aperiam modi maiores, minus dolorum soluta explicabo nam, harum cumque,
+    ea architecto molestias qui officia illo! Suscipit aperiam inventore qui
+    vero velit aut molestias hic temporibus exercitationem optio?
   </body>
 </html>
