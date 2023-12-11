@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .container {
+        background-color: red;
+        height: 100px;
+      }
+    </style>
+    <style>
+      .container {
+        /* width: 300px; */
+        /* width: calc(400px - (calc(100px + 200px))); */
+        /* With different units  */
+        width: calc(100% - 30px);
+        margin: auto;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>
