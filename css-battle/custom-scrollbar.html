@@ -17,29 +17,43 @@
       height: 100vh;
       overflow-y: scroll;
       overflow-x: hidden;
-
-
+      background-color: honeydew;
     }
 
-     ::-webkit-scrollbar-track {
+    .show-scrollbar::-webkit-scrollbar-track {
       -webkit-box-shadow: none !important;
-      background-color: green;
-      
+      background-color: transparent;
     }
-    ::-webkit-scrollbar {
-      width: 10px !important;
-      background-color: red;
+
+    .show-scrollbar::-webkit-scrollbar {
+      width: 5px !important;
+      background-color: transparent;
     }
-    ::-webkit-scrollbar-thumb {
-      background-color: orange;
-    } 
+
+    .show-scrollbar::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, yellow, red, yellow);
+    }
+
+    .hide-scrollbar::-webkit-scrollbar-track {
+      -webkit-box-shadow: none !important;
+      background-color: transparent;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      width: 5px !important;
+      background-color: transparent;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
 
     p {
       padding: 5rem;
       width: 10vw;
     }
   </style>
-  <body>
+  <body id="body" class="hide-scrollbar">
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, doloribus.
       Perferendis, adipisci tenetur quae magnam dicta rem, id architecto
@@ -65,7 +79,26 @@
       expedita omnis.
     </p>
     <script>
-    //   window.addEventListener("scroll", this.handleScroll, true);
+      const body = document.getElementById("body");
+      const onHandleScroll = () => {
+        body.classList.remove("hide-scrollbar");
+        body.classList.add("show-scrollbar");
+      };
+
+      const onStopScroll = () => {
+        body.classList.remove("show-scrollbar");
+        body.classList.add("hide-scrollbar");
+      };
+
+      window.addEventListener("load", () => {
+        window.addEventListener("scroll", onHandleScroll, true);
+        window.addEventListener("scrollend", onStopScroll, true);
+      });
+
+      window.addEventListener("unload", () => {
+        window.removeEventListener("scroll", onHandleScroll, true);
+        window.removeEventListener("scrollend", onStopScroll, true);
+      });
     </script>
   </body>
 </html>
