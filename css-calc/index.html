@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .container {
+        background-color: red;
+        height: 100px;
+      }
+    </style>
+    <style>
+      .container {
+        /* width: 300px; */
+        /* width: calc(400px - (calc(100px + 200px))); */
+        /* With different units  */
+        /* width: calc(100% - 30px); */
+        --width: 100px;
+        width: calc(var(--width) * 2);
+        margin: auto;
+      }
+      :root {
+        --hue: 180
+      }
+
+      .primary {
+        background-color: hsl(var(--hue), 100%, 50%);
+        border: none;
+        outline: none;
+      }
+
+      .danger {
+        background-color: hsl(calc(var(--hue) - 180), 100%, 50%);
+        border: none;
+        outline: none;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container"></div>
+    <button class="primary">Primary Button</button>
+    <button class="danger">Danger Button</button>
+  </body>
+</html>
